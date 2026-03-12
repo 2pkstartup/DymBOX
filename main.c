@@ -59,7 +59,7 @@
 
 /* Topná spirála: konstanty */
 #define HEATER_PERIOD  4880   /* 10 s perioda (488 Hz × 10) */
-#define HEATER_HYST    50     /* hystereze 5.0°C (v 1/10 °C) */
+#define HEATER_HYST    25     /* hystereze 5.0°C (v 1/10 °C) */
 
 /* Pin pro každou pozici: DIG1(stovky)=PD2, DIG2(desítky)=PD1, DIG3(jednotky)=PD0 */
 static const uint8_t dig_pin[] = {PD2, PD1, PD0};
