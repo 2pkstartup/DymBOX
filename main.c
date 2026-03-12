@@ -14,6 +14,11 @@
  *   PD1 = DIG2 (desítky)
  *   PD0 = DIG3 (jednotky)
  *
+ * Rotační enkodér KY-040:
+ *   PD3 = CLK (A)
+ *   PD4 = DT  (B)
+ *   PD5 = SW  (tlačítko)
+ *
  * Všechny výstupy: HIGH = neaktivní (pull-up), LOW = aktivní
  */
 
@@ -28,6 +33,12 @@
 
 /* Maska digit-select pinů na PORTD */
 #define DIG_MASK    ((1 << PD0)|(1 << PD1)|(1 << PD2))
+
+/* Rotační enkodér KY-040 na PORTD */
+#define ENC_CLK     PD3
+#define ENC_DT      PD4
+#define ENC_SW      PD5
+#define ENC_MASK    ((1 << ENC_CLK)|(1 << ENC_DT)|(1 << ENC_SW))
 
 /* Pin pro každou pozici: DIG1(stovky)=PD2, DIG2(desítky)=PD1, DIG3(jednotky)=PD0 */
 static const uint8_t dig_pin[] = {PD2, PD1, PD0};
@@ -89,9 +100,18 @@ volatile uint8_t disp_d[3];
 
 static volatile uint8_t current_digit = 0;
 
-/* Timer0 overflow - multiplexing ~488 Hz (každá číslice ~163 Hz) */
+/* Enkodér: stav a výstupní hodnoty */
+static volatile int16_t enc_counter = 0;
+static volatile uint8_t enc_button  = 0;   /* 1 = stisknuto (debouncovaně) */
+static uint8_t enc_last_clk = 0;
+static uint8_t sw_debounce = 0;
+static uint8_t sw_last = 0;
+
+/* Timer0 overflow - multiplexing + polling enkodéru (~488 Hz) */
 ISR(TIMER0_OVF_vect)
 {
+    /* --- Display multiplexing --- */
+
     /* Zhasnout všechny číslice (HIGH = neaktivní) */
     PORTD |= DIG_MASK;
 
@@ -110,6 +130,31 @@ ISR(TIMER0_OVF_vect)
 
     if (++current_digit >= 3)
         current_digit = 0;
+
+    /* --- Polling enkodéru --- */
+    uint8_t pind = PIND;
+    uint8_t clk_now = !(pind & (1 << ENC_CLK));
+
+    /* Detekce hrany CLK: falling edge (1->0 v aktivním stavu) */
+    if (clk_now && !enc_last_clk) {
+        if (pind & (1 << ENC_DT))
+            enc_counter++;
+        else
+            enc_counter--;
+    }
+    enc_last_clk = clk_now;
+
+    /* Debounce tlačítka (~8 ms = 4 vzorky při 488 Hz) */
+    uint8_t sw_now = !(pind & (1 << ENC_SW));
+    if (sw_now == sw_last) {
+        if (sw_debounce < 4)
+            sw_debounce++;
+        if (sw_debounce >= 4)
+            enc_button = sw_now;
+    } else {
+        sw_debounce = 0;
+    }
+    sw_last = sw_now;
 }
 
 static void display_init(void)
@@ -123,8 +168,8 @@ static void display_init(void)
     PORTC = 0x3F;
 
     /* PORTD: PD0-PD2 výstup (digit), PD6-PD7 výstup (seg B,F), PD3-PD5 vstup s pull-up */
-    DDRD  = DIG_MASK | SEG_D_MASK;
-    PORTD = 0xFF;
+    DDRD  = DIG_MASK | SEG_D_MASK;  /* PD3,PD4,PD5 zůstávají vstup */
+    PORTD = 0xFF;                   /* pull-up na všech (i enkodér) */
 
     /* Timer0: prescaler 64, overflow interrupt */
     /* 8 MHz / 64 / 256 = ~488 Hz */
@@ -171,13 +216,27 @@ void display_off(void)
     }
 }
 
-/* Počítání 0-999 po 0.5 s, pak začne znovu */
-void demo_count(void)
+/* Přečíst aktuální hodnotu enkodéru (atomicky) */
+int16_t encoder_get(void)
 {
-    for (uint16_t i = 0; i < 1000; i++) {
-        display_number(i);
-        _delay_ms(500);
-    }
+    cli();
+    int16_t val = enc_counter;
+    sei();
+    return val;
+}
+
+/* Nastavit hodnotu enkodéru */
+void encoder_set(int16_t val)
+{
+    cli();
+    enc_counter = val;
+    sei();
+}
+
+/* Přečíst stav tlačítka (1 = stisknuto) */
+uint8_t encoder_button(void)
+{
+    return enc_button;
 }
 
 int main(void)
@@ -185,8 +244,29 @@ int main(void)
     display_init();
     sei();
 
+    int16_t value = 0;
+    encoder_set(0);
+
     while (1) {
-        demo_count();
+        value = encoder_get();
+
+        /* Omezit rozsah 0-999 */
+        if (value < 0) {
+            value = 0;
+            encoder_set(0);
+        } else if (value > 999) {
+            value = 999;
+            encoder_set(999);
+        }
+
+        display_number(value);
+
+        /* Tlačítko = reset na 0 */
+        if (encoder_button()) {
+            encoder_set(0);
+            while (encoder_button())
+                ;  /* počkat na uvolnění */
+        }
     }
 
     return 0;
