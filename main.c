@@ -364,22 +364,84 @@ static void display_temp(int16_t temp_x10)
     disp_b[2] = seg_b[d2]; disp_c[2] = seg_c[d2]; disp_d[2] = seg_d[d2];
 }
 
+/* Zobrazit žádanou hodnotu: XX.X s DP1 (první tečka) jako indikace editačního režimu */
+static void display_setpoint(int16_t sp_x10)
+{
+    if (sp_x10 < 0 || sp_x10 > 999)
+        sp_x10 = 0;
+
+    uint8_t d2 = sp_x10 % 10; sp_x10 /= 10;
+    uint8_t d1 = sp_x10 % 10; sp_x10 /= 10;
+    uint8_t d0 = sp_x10 % 10;
+
+    /* DIG1 s DP (indikace edit módu) */
+    disp_b[0] = seg_b[d0]; disp_c[0] = seg_c[d0] | (1 << PC2); disp_d[0] = seg_d[d0];
+    /* DIG2 s desetinnou tečkou */
+    disp_b[1] = seg_b[d1]; disp_c[1] = seg_c[d1] | (1 << PC2); disp_d[1] = seg_d[d1];
+    disp_b[2] = seg_b[d2]; disp_c[2] = seg_c[d2]; disp_d[2] = seg_d[d2];
+}
+
+/* Čekání na uvolnění tlačítka enkodéru */
+static void wait_button_release(void)
+{
+    while (encoder_button())
+        ;
+    _delay_ms(50);  /* krátký debounce po uvolnění */
+}
+
 int main(void)
 {
     display_init();
     sei();
 
+    int16_t setpoint = 320;  /* žádaná hodnota: 32.0°C (v 1/10 °C) */
+    int16_t temp = 0;
+    uint8_t editing = 0;
+
     ds18b20_start();
     _delay_ms(750);
 
     while (1) {
-        int16_t temp = ds18b20_read_temp();
-        ds18b20_start();  /* spustit další konverzi */
+        if (!editing) {
+            /* --- Normální režim: zobraz teplotu --- */
+            temp = ds18b20_read_temp();
+            ds18b20_start();
+            display_temp(temp);
 
-        display_temp(temp);
+            /* Stisk tlačítka → přepni do editace */
+            if (encoder_button()) {
+                wait_button_release();
+                editing = 1;
+                encoder_set(setpoint);
+                display_setpoint(setpoint);
+            }
 
-        /* Čekání ~1 s (konverze trvá 750 ms, zbytek doplňuje) */
-        _delay_ms(1000);
+            _delay_ms(250);
+        } else {
+            /* --- Editační režim: nastav žádanou hodnotu --- */
+            int16_t val = encoder_get();
+
+            /* Omezit rozsah 0.0 - 99.9 °C */
+            if (val < 0) {
+                val = 0;
+                encoder_set(0);
+            } else if (val > 999) {
+                val = 999;
+                encoder_set(999);
+            }
+
+            display_setpoint(val);
+
+            /* Stisk tlačítka → ulož a vrať se */
+            if (encoder_button()) {
+                setpoint = val;
+                wait_button_release();
+                editing = 0;
+                ds18b20_start();
+            }
+
+            _delay_ms(50);
+        }
     }
 
     return 0;
