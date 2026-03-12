@@ -31,6 +31,7 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <avr/eeprom.h>
 #include <util/delay.h>
 
 /* Masky segmentových pinů na jednotlivých portech */
@@ -463,6 +464,30 @@ static void heater_update(int16_t temp_x10, int16_t setpoint_x10)
     /* v pásmu hystereze: ponechat současný stav */
 }
 
+/* ====== EEPROM: uložení setpointu ====== */
+
+#define EEPROM_MAGIC     0xDB   /* kontrolní byte pro validaci */
+#define EEPROM_ADDR_MAGIC  ((uint8_t *)0)
+#define EEPROM_ADDR_SP     ((int16_t *)1)
+
+static int16_t eeprom_load_setpoint(int16_t default_val)
+{
+    if (eeprom_read_byte(EEPROM_ADDR_MAGIC) != EEPROM_MAGIC)
+        return default_val;
+
+    int16_t val = eeprom_read_word((uint16_t *)EEPROM_ADDR_SP);
+    if (val < 0 || val > 999)
+        return default_val;
+
+    return val;
+}
+
+static void eeprom_save_setpoint(int16_t val)
+{
+    eeprom_update_byte(EEPROM_ADDR_MAGIC, EEPROM_MAGIC);
+    eeprom_update_word((uint16_t *)EEPROM_ADDR_SP, (uint16_t)val);
+}
+
 /* ====== Hlavní program ====== */
 
 #define MODE_TEMP      0
@@ -475,7 +500,7 @@ int main(void)
     pwm_init();
     sei();
 
-    int16_t setpoint = 320;   /* žádaná hodnota: 32.0°C */
+    int16_t setpoint = eeprom_load_setpoint(320);  /* z EEPROM nebo 32.0°C */
     int8_t  fan_step = 5;     /* 50% */
     uint8_t mode = MODE_TEMP;
     uint8_t fan_timeout = 0;  /* odpočet 2 s (40 × 50 ms) */
@@ -566,6 +591,7 @@ int main(void)
 
             /* Stisk tlačítka → ulož a vrať se */
             if (encoder_button()) {
+                eeprom_save_setpoint(setpoint);
                 wait_button_release();
                 mode = MODE_TEMP;
                 ds18b20_start();
