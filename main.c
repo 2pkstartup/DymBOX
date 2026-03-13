@@ -1,32 +1,80 @@
 /*
- * dymbox - ATmega8, 3-digit 7-segment display (common anode)
+ * ============================================================================
+ * dymbox - Regulátor teploty s ATmega8
+ * ============================================================================
  *
- * Zapojení (active LOW - pull-up na všech výstupech):
+ * Popis:
+ *   Regulátor teploty pro topnou spirálu s chladícím ventilátorem.
+ *   Měření teploty DS18B20, zobrazení na 3-místném 7-segmentovém displeji,
+ *   ovládání rotačním enkodérem KY-040. Setpoint uložen v EEPROM.
  *
- * Segmenty:
- *   A  = PB0     E  = PC4
- *   B  = PD6     F  = PD7
- *   C  = PC0     G  = PC1
- *   D  = PC3     DP = PC2
+ * Funkce:
+ *   - Měření teploty DS18B20 (1-Wire), rozlišení 0.1 °C
+ *   - 3-místný 7-seg display (common anode), multiplexovaný Timer0 ISR
+ *   - Rotační enkodér KY-040 (polling v Timer0 ISR, debounce tlačítka)
+ *   - PWM ventilátor 0-100% po 10% (Timer1, 62.5 kHz, active HIGH)
+ *   - Topná spirála ON/OFF s hysterezí 5 °C (active HIGH)
+ *   - Setpoint ukládán do EEPROM (s magic byte validací)
  *
- * Výběr číslic (PORTD, active LOW):
- *   PD2 = DIG1 (stovky)
- *   PD1 = DIG2 (desítky)
- *   PD0 = DIG3 (jednotky)
+ * Režimy zobrazení:
+ *   1. Teplota (XX.X) - výchozí, DP3 = spirála topí
+ *   2. Ventilátor (FXX/100) - po otočení enkodéru, timeout 2 s
+ *   3. Setpoint (XX.X + DP1) - stisk tlačítka, rotací nastavit, stiskem uložit
  *
- * Rotační enkodér KY-040:
- *   PD3 = CLK (A)
- *   PD4 = DT  (B)
- *   PD5 = SW  (tlačítko)
+ * Zapojení pinů ATmega8 (DIP-28):
  *
- * DS18B20 teploměr (1-Wire):
- *   PC5 = DQ (data)
+ *   PORTB:  PB0 = seg A (display)
+ *           PB1 = OC1A - PWM ventilátor (active HIGH)
+ *           PB2 = topná spirála (active HIGH)
+ *           PB3..PB5 = ISP (MOSI, MISO, SCK) / volné
  *
- * PWM výstupy (rezervováno, Timer1):
- *   PB1 = OC1A (PWM1)
- *   PB2 = OC1B (PWM2)
+ *   PORTC:  PC0 = seg C        PC3 = seg D
+ *           PC1 = seg G        PC4 = seg E
+ *           PC2 = seg DP       PC5 = DS18B20 DQ (+ 4.7kΩ pull-up)
  *
- * Všechny výstupy: HIGH = neaktivní (pull-up), LOW = aktivní
+ *   PORTD:  PD0 = DIG3 (jednotky)   PD3 = ENC CLK (A)
+ *           PD1 = DIG2 (desítky)    PD4 = ENC DT  (B)
+ *           PD2 = DIG1 (stovky)     PD5 = ENC SW  (tlačítko)
+ *           PD6 = seg B             PD7 = seg F
+ *
+ * Schéma:
+ *
+ *                         ATmega8 (DIP-28)
+ *                      ┌────────────────────┐
+ *         seg A ← PB0 ─┤1  (PC5) RESET   28├─ PC5 → DS18B20 DQ
+ *     PWM fan ← PB1 ─┤2  (PC4)  ADC5   27├─ PC4 → seg E
+ *      heater ← PB2 ─┤3  (PC3)  ADC4   26├─ PC3 → seg D
+ *    ISP MOSI   PB3 ─┤4  (PC2)  ADC3   25├─ PC2 → seg DP
+ *    ISP MISO   PB4 ─┤5  (PC1)  ADC2   24├─ PC1 → seg G
+ *     ISP SCK   PB5 ─┤6  (PC0)  ADC1   23├─ PC0 → seg C
+ *                     ─┤7  AVCC         22├─ GND
+ *                     ─┤8  AREF         21├─ AREF
+ *               VCC  ─┤9  VCC          20├─ VCC
+ *               GND  ─┤10 GND          19├─ PB5 (SCK)
+ *              XTAL1 ─┤11              18├─ PB4 (MISO)
+ *              XTAL2 ─┤12              17├─ PB3 (MOSI)
+ *        DIG3 ← PD0 ─┤13 (RXD)        16├─ PB2 → heater
+ *        DIG2 ← PD1 ─┤14 (TXD)        15├─ PB1 → PWM fan
+ *        DIG1 ← PD2 ─┤15 (INT0)       14├─ PD7 → seg F
+ *     ENC CLK → PD3 ─┤16 (INT1)       13├─ PD6 → seg B
+ *      ENC DT → PD4 ─┤17 (T0)
+ *      ENC SW → PD5 ─┤18 (T1)
+ *                      └────────────────────┘
+ *
+ *   Display: common anode, segmenty active LOW
+ *   Digit select: active LOW (PNP/P-FET)
+ *   Výstupy PB1, PB2: active HIGH (pro D4184 MOSFET moduly)
+ *   DS18B20: externě 4.7 kΩ pull-up na VCC
+ *   KY-040: interní pull-up na PD3, PD4, PD5
+ *   F_CPU = 16 MHz
+ *
+ * Konstanty:
+ *   HEATER_HYST    = 5.0 °C (hystereze topné spirály)
+ *   HEATER_PERIOD  = 10 s (perioda ON/OFF cyklu)
+ *   Výchozí setpoint = 32.0 °C (pokud EEPROM prázdná)
+ *   Výchozí fan = 50%
+ *
+ * ============================================================================
  */
 
 #include <avr/io.h>
