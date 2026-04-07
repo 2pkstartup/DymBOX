@@ -3413,6 +3413,249 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Transistor_BJT:BC327"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "BC327"
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+				(at 5.08 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "PNP"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=C 2=B 3=E"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "PNP Transistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO?92*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "BC327_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 0.635 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -1.778) (xy 1.778 -2.286) (xy 1.27 -1.27) (xy 2.286 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "BC327_1_1"
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Transistor_FET:BS170"
 			(pin_names
 				(hide yes)
@@ -4178,6 +4421,10 @@
 		(uuid "5755328c-f477-40fa-bafb-49f35b11326b")
 	)
 	(no_connect
+		(at 200.66 35.56)
+		(uuid "77a084f8-d323-414f-ad01-fdb4c9d4fa4b")
+	)
+	(no_connect
 		(at 58.42 109.22)
 		(uuid "d6c667fb-b30a-4a74-b9df-68b4f26d8b7a")
 	)
@@ -4273,6 +4520,16 @@
 	)
 	(wire
 		(pts
+			(xy 200.66 43.18) (xy 203.2 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5017b2e9-5167-4b9b-b886-e4f76b789a71")
+	)
+	(wire
+		(pts
 			(xy 127 95.25) (xy 130.81 95.25)
 		)
 		(stroke
@@ -4320,6 +4577,16 @@
 			(type default)
 		)
 		(uuid "68f319eb-b418-419a-889a-2c75f2ae4e05")
+	)
+	(wire
+		(pts
+			(xy 200.66 38.1) (xy 231.14 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "709537f1-1134-4d7e-ae1d-0df4798b2812")
 	)
 	(wire
 		(pts
@@ -4373,6 +4640,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 113.03) (xy 130.81 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "895543b5-95bf-4f38-88c6-1e9e0c1a7546")
+	)
+	(wire
+		(pts
 			(xy 96.52 83.82) (xy 96.52 82.55)
 		)
 		(stroke
@@ -4413,6 +4690,16 @@
 	)
 	(wire
 		(pts
+			(xy 200.66 40.64) (xy 218.44 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acb99deb-e984-470f-b6e3-69f1f68ce006")
+	)
+	(wire
+		(pts
 			(xy 39.37 111.76) (xy 45.72 111.76)
 		)
 		(stroke
@@ -4420,6 +4707,16 @@
 			(type default)
 		)
 		(uuid "b12ab31f-b293-45b4-b0f5-7364b1c2954e")
+	)
+	(wire
+		(pts
+			(xy 127 110.49) (xy 130.81 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5b1a0fb-68c5-46f4-9c37-b5b5578e2de7")
 	)
 	(wire
 		(pts
@@ -4503,6 +4800,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 107.95) (xy 130.81 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f244e451-f351-441d-8403-579b296f18e5")
+	)
+	(wire
+		(pts
 			(xy 128.27 30.48) (xy 137.16 30.48)
 		)
 		(stroke
@@ -4531,6 +4838,16 @@
 		)
 		(uuid "0e32634a-3134-445d-9f50-b1101a4b5da7")
 	)
+	(label "DIG_0"
+		(at 130.81 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0fd806d1-2077-4980-8dbf-6d18c0cfc961")
+	)
 	(label "SEG_B"
 		(at 128.27 27.94 0)
 		(effects
@@ -4551,7 +4868,7 @@
 		)
 		(uuid "180d45b1-a4e0-4e25-bfe9-8b4c851b643b")
 	)
-	(label "SEG_G"
+	(label "SEG_D"
 		(at 130.81 92.71 0)
 		(effects
 			(font
@@ -4560,6 +4877,16 @@
 			(justify left bottom)
 		)
 		(uuid "188f0de4-1121-4a10-be44-b908d34a9e94")
+	)
+	(label "DIG_1"
+		(at 130.81 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f78cc5f-d49f-45e9-a331-0f52b93d8447")
 	)
 	(label "RESET"
 		(at 82.55 72.39 0)
@@ -4570,6 +4897,16 @@
 			(justify left bottom)
 		)
 		(uuid "455e3f55-bc63-4720-abc7-89f95996a2b6")
+	)
+	(label "DIG_0"
+		(at 208.28 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4f137d60-01d1-4e7a-b4cb-226b4ecb2a2a")
 	)
 	(label "SEG_F"
 		(at 128.27 38.1 0)
@@ -4591,7 +4928,7 @@
 		)
 		(uuid "9f8d955d-f7c4-4e22-9d93-de47384ca5c0")
 	)
-	(label "SEG_E"
+	(label "SEG_G"
 		(at 130.81 100.33 0)
 		(effects
 			(font
@@ -4600,6 +4937,16 @@
 			(justify left bottom)
 		)
 		(uuid "a32fb3ce-e67c-4c9b-8191-20e93247c820")
+	)
+	(label "DIG_1"
+		(at 223.52 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a7e69394-56dd-4f71-8f6a-bf2998bd9f6e")
 	)
 	(label "RESET"
 		(at 39.37 109.22 0)
@@ -4661,7 +5008,7 @@
 		)
 		(uuid "d651235d-4a0c-42d0-882e-371546a52dc7")
 	)
-	(label "SEG_D"
+	(label "SEG_C"
 		(at 130.81 97.79 0)
 		(effects
 			(font
@@ -4681,7 +5028,7 @@
 		)
 		(uuid "e62c6273-ae9b-4181-a85a-cef02d09a70f")
 	)
-	(label "SEG_C"
+	(label "SEG_E"
 		(at 130.81 90.17 0)
 		(effects
 			(font
@@ -4701,6 +5048,26 @@
 		)
 		(uuid "f20a5f9d-d72f-40db-8b72-cbde97f5ff86")
 	)
+	(label "DIG_2"
+		(at 130.81 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f5f88adf-80ed-4565-8100-98b06fe58371")
+	)
+	(label "DIG_2"
+		(at 236.22 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8fdfbb3-881f-4e78-9401-56939daad278")
+	)
 	(label "SEG_F"
 		(at 130.81 125.73 0)
 		(effects
@@ -4713,7 +5080,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 215.9 46.99 0)
+		(at 255.27 109.22 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4724,7 +5091,7 @@
 		(fields_autoplaced yes)
 		(uuid "074a4d82-d2ea-47e1-b1e3-9017a6873321")
 		(property "Reference" "#PWR02"
-			(at 215.9 50.8 0)
+			(at 255.27 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4735,7 +5102,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 215.9 41.91 0)
+			(at 255.27 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4745,7 +5112,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 46.99 0)
+			(at 255.27 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4756,7 +5123,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 46.99 0)
+			(at 255.27 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4767,7 +5134,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 215.9 46.99 0)
+			(at 255.27 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4791,7 +5158,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 227.33 71.12 0)
+		(at 266.7 133.35 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4802,7 +5169,7 @@
 		(fields_autoplaced yes)
 		(uuid "07b734c1-9005-4184-a5ea-8baaef651e35")
 		(property "Reference" "#PWR014"
-			(at 227.33 77.47 0)
+			(at 266.7 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4813,7 +5180,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 227.33 76.2 0)
+			(at 266.7 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4823,7 +5190,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 227.33 71.12 0)
+			(at 266.7 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4834,7 +5201,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 227.33 71.12 0)
+			(at 266.7 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4845,7 +5212,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 227.33 71.12 0)
+			(at 266.7 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4954,7 +5321,7 @@
 	)
 	(symbol
 		(lib_id "Device:RotaryEncoder_Switch")
-		(at 201.93 111.76 0)
+		(at 223.52 142.24 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4965,7 +5332,7 @@
 		(fields_autoplaced yes)
 		(uuid "17f3b8ba-7fca-403a-b49b-49715493fb94")
 		(property "Reference" "SW1"
-			(at 201.93 101.6 0)
+			(at 223.52 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4975,7 +5342,7 @@
 			)
 		)
 		(property "Value" "RotaryEncoder_Switch"
-			(at 201.93 104.14 0)
+			(at 223.52 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4985,7 +5352,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 198.12 107.696 0)
+			(at 219.71 138.176 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4996,7 +5363,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 201.93 105.156 0)
+			(at 223.52 135.636 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5007,7 +5374,7 @@
 			)
 		)
 		(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch"
-			(at 201.93 111.76 0)
+			(at 223.52 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5036,6 +5403,86 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 208.28 54.61 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1d21512c-735b-412b-9634-3fcdc4818573")
+		(property "Reference" "R10"
+			(at 201.93 54.61 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 204.47 54.61 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+			(at 210.058 54.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 208.28 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "796221c5-fca4-4f96-b18c-2e8d3069a642")
+		)
+		(pin "2"
+			(uuid "8ad4fa4b-296a-4c35-a97d-3b50abc2c503")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -6184,7 +6631,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:BS170")
-		(at 208.28 62.23 0)
+		(at 247.65 124.46 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6195,7 +6642,7 @@
 		(fields_autoplaced yes)
 		(uuid "4c67d634-081a-4c08-9b32-5e1bfd63b31a")
 		(property "Reference" "Q3"
-			(at 214.63 60.9599 0)
+			(at 254 123.1899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6206,7 +6653,7 @@
 			)
 		)
 		(property "Value" "BS170"
-			(at 214.63 63.4999 0)
+			(at 254 125.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6217,7 +6664,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 213.36 64.135 0)
+			(at 252.73 126.365 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6230,7 +6677,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
-			(at 213.36 66.04 0)
+			(at 252.73 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6242,7 +6689,7 @@
 			)
 		)
 		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
-			(at 208.28 62.23 0)
+			(at 247.65 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6836,6 +7283,116 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:BC327")
+		(at 208.28 45.72 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6f9f39d6-653d-489b-b6f7-338b7a92bf21")
+		(property "Reference" "Q1"
+			(at 207.0099 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC327"
+			(at 209.5499 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder"
+			(at 210.185 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
+			(at 208.28 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
+			(at 208.28 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "PNP"
+			(at 208.28 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 208.28 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "7ffa760d-736d-4689-aa23-95addfcb1844")
+		)
+		(pin "1"
+			(uuid "2bc21a6b-6b43-45b0-ba85-0071800e5c1d")
+		)
+		(pin "2"
+			(uuid "713bd503-4c2b-4247-bd78-ee2a566cdb0f")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 114.3 64.77 0)
 		(unit 1)
@@ -7227,8 +7784,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 219.71 69.85 0)
+		(lib_id "power:+5V")
+		(at 241.3 38.1 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7237,9 +7794,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "87f9a60d-07d0-4662-a5e2-14b9bf30b387")
-		(property "Reference" "#PWR013"
-			(at 219.71 76.2 0)
+		(uuid "85898992-de09-47f7-927d-f8e852d185f4")
+		(property "Reference" "#PWR025"
+			(at 237.49 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7249,8 +7806,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 219.71 74.93 0)
+		(property "Value" "+5V"
+			(at 246.38 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7260,7 +7817,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 219.71 69.85 0)
+			(at 241.3 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7271,7 +7828,85 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 219.71 69.85 0)
+			(at 241.3 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 241.3 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0b3dd9db-8f12-4d10-8cd3-59330de1288f")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 259.08 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "87f9a60d-07d0-4662-a5e2-14b9bf30b387")
+		(property "Reference" "#PWR013"
+			(at 259.08 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 259.08 137.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.08 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7282,7 +7917,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 219.71 69.85 0)
+			(at 259.08 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7466,6 +8101,116 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:BC327")
+		(at 223.52 43.18 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "92a34e25-36c0-46be-9635-8f61c5dfc79d")
+		(property "Reference" "Q2"
+			(at 222.2499 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC327"
+			(at 224.7899 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
+			(at 225.425 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
+			(at 223.52 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
+			(at 223.52 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "PNP"
+			(at 223.52 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 223.52 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5f0d5996-8115-4de3-8945-e640e6dbf39f")
+		)
+		(pin "1"
+			(uuid "851c52fd-77e8-4872-bddd-c48b885c2723")
+		)
+		(pin "3"
+			(uuid "1146e344-f0ac-44f4-865e-02cf383b6bc6")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 140.97 27.94 90)
 		(unit 1)
@@ -7539,6 +8284,196 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 223.52 52.07 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "95695751-3fb1-4cb0-bc97-aac39b715d89")
+		(property "Reference" "R11"
+			(at 217.17 52.07 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 219.71 52.07 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+			(at 225.298 52.07 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 223.52 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ebcd37d4-6282-4b99-86b5-07774df69cba")
+		)
+		(pin "2"
+			(uuid "9ff80ff0-0421-4dab-b3ef-8bb80c06f61b")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC327")
+		(at 236.22 40.64 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "97b88656-ca6d-4920-8daf-b07cd41f3e63")
+		(property "Reference" "Q5"
+			(at 234.9499 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC327"
+			(at 237.4899 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
+			(at 238.125 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
+			(at 236.22 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
+			(at 236.22 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "PNP"
+			(at 236.22 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=C 2=B 3=E"
+			(at 236.22 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f0c3680f-50e7-4d16-887a-195e2bfeb1cc")
+		)
+		(pin "2"
+			(uuid "57271bc4-f72d-45a3-a764-cd1b8c80ccb2")
+		)
+		(pin "3"
+			(uuid "ec4df39e-3a85-4f54-b6f0-cade2c9cc4d6")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -8049,8 +8984,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+12V")
-		(at 220.98 46.99 0)
+		(lib_id "power:+5V")
+		(at 213.36 43.18 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8059,9 +8994,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c7db1af5-50d8-4b50-8d0e-642db5fca371")
-		(property "Reference" "#PWR03"
-			(at 220.98 50.8 0)
+		(uuid "bd3221a3-5577-4176-992b-232d68391a76")
+		(property "Reference" "#PWR023"
+			(at 209.55 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8071,8 +9006,8 @@
 				)
 			)
 		)
-		(property "Value" "+12V"
-			(at 220.98 41.91 0)
+		(property "Value" "+5V"
+			(at 218.44 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8082,7 +9017,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 220.98 46.99 0)
+			(at 213.36 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8093,7 +9028,85 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 46.99 0)
+			(at 213.36 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 213.36 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "16419e52-2b8c-47eb-8c37-76e908f35048")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 260.35 109.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c7db1af5-50d8-4b50-8d0e-642db5fca371")
+		(property "Reference" "#PWR03"
+			(at 260.35 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 260.35 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 260.35 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8104,7 +9117,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 220.98 46.99 0)
+			(at 260.35 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8121,6 +9134,85 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 228.6 40.64 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c981b0a5-868e-41e4-9b67-20a2781931cb")
+		(property "Reference" "#PWR024"
+			(at 224.79 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 232.41 40.6399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 228.6 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 228.6 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 228.6 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c209a5bb-e1f6-4ca8-9746-b1ddd4068241")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -8362,7 +9454,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:BS170")
-		(at 208.28 80.01 0)
+		(at 247.65 142.24 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8373,7 +9465,7 @@
 		(fields_autoplaced yes)
 		(uuid "e2d14d44-b165-41f5-9ff4-5f53f2f75963")
 		(property "Reference" "Q4"
-			(at 214.63 78.7399 0)
+			(at 254 140.9699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8384,7 +9476,7 @@
 			)
 		)
 		(property "Value" "BS170"
-			(at 214.63 81.2799 0)
+			(at 254 143.5099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8395,7 +9487,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 213.36 81.915 0)
+			(at 252.73 144.145 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8408,7 +9500,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
-			(at 213.36 83.82 0)
+			(at 252.73 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8420,7 +9512,7 @@
 			)
 		)
 		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
-			(at 208.28 80.01 0)
+			(at 247.65 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8443,6 +9535,86 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 236.22 49.53 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e587a9a0-0711-455b-af1d-2a02852a2f09")
+		(property "Reference" "R12"
+			(at 229.87 49.53 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 232.41 49.53 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+			(at 237.998 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 236.22 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "503f213a-d6f4-4d6c-93ba-87fda64b5fa7")
+		)
+		(pin "2"
+			(uuid "c23c59eb-e14b-4ef9-822d-29b415f37783")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "R12")
 					(unit 1)
 				)
 			)
