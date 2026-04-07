@@ -19,11 +19,11 @@ Regulátor teploty postavený na mikrokontroléru **ATmega8** s 3-místným 7-se
 |---------|-------------|------|
 | A       | PB0         | PORTB |
 | B       | PD6         | PORTD |
-| C       | PC0         | PORTC |
-| D       | PC3         | PORTC |
-| E       | PC4         | PORTC |
+| C       | PC3         | PORTC |
+| D       | PC1         | PORTC |
+| E       | PC0         | PORTC |
 | F       | PD7         | PORTD |
-| G       | PC1         | PORTC |
+| G       | PC4         | PORTC |
 | DP      | PC2         | PORTC |
 
 ### Výběr číslic (active LOW)
@@ -63,8 +63,8 @@ Regulátor teploty postavený na mikrokontroléru **ATmega8** s 3-místným 7-se
 
 ```
 PORTB: PB0 = seg A       PB1 = PWM fan    PB2 = heater    PB3–PB5 = volné
-PORTC: PC0 = seg C       PC1 = seg G      PC2 = seg DP    PC3 = seg D
-       PC4 = seg E       PC5 = DS18B20
+PORTC: PC0 = seg E       PC1 = seg D      PC2 = seg DP    PC3 = seg C
+       PC4 = seg G       PC5 = DS18B20
 PORTD: PD0 = DIG3        PD1 = DIG2       PD2 = DIG1
        PD3 = ENC CLK     PD4 = ENC DT     PD5 = ENC SW
        PD6 = seg B       PD7 = seg F
@@ -113,7 +113,8 @@ Výchozí setpoint: **32.0 °C**, hystereze: **5.0 °C** (konstanta `HEATER_HYST
 
 - `avr-gcc`, `avr-libc`, `binutils-avr`
 - `avrdude`
-- Programátor USBasp (nebo jiný – viz `PROGRAMMER` v Makefile)
+- `cmake` (≥ 3.20)
+- Programátor USBasp (nebo jiný – viz `PROGRAMMER` v CMakeLists.txt)
 
 ### Instalace toolchainu (Debian/Ubuntu)
 
@@ -124,17 +125,16 @@ sudo apt install gcc-avr avr-libc binutils-avr avrdude
 ## Kompilace a nahrání
 
 ```bash
-make            # Kompilace
-make flash      # Nahrání do MCU
-make fuses      # Nastavení fuses (interní 16 MHz)
-make size       # Velikost firmware
-make clean      # Smazání build souborů
+cmake -B build -DCMAKE_TOOLCHAIN_FILE=cmake/avr-gcc.cmake   # Konfigurace
+cmake --build build                                          # Kompilace
+cmake --build build --target flash                           # Nahrání do MCU
+cmake --build build --target fuses                           # Nastavení fuses
 ```
 
 ### Velikost firmware
 
 ```
-Program:  ~2046 bytes (25.0% Full)
+Program:  ~2186 bytes (26.7% Full)
 Data:       ~61 bytes  (6.0% Full)
 ```
 
@@ -144,7 +144,7 @@ Hlavní konstanty v `main.c`:
 
 | Konstanta | Hodnota | Popis |
 |-----------|---------|-------|
-| `F_CPU` | 16 MHz | Frekvence krystalu/oscilátoru (Makefile) |
+| `F_CPU` | 16 MHz | Frekvence krystalu/oscilátoru (CMakeLists.txt) |
 | `HEATER_HYST` | 50 (5.0 °C) | Hystereze topné spirály (v 1/10 °C) |
 | `HEATER_PERIOD` | 4880 | Perioda ON/OFF cyklu (~10 s) |
 | Výchozí setpoint | 320 (32.0 °C) | Žádaná teplota (v 1/10 °C) |
@@ -156,11 +156,11 @@ Hlavní konstanty v `main.c`:
                     ATmega8
                  ┌───────────┐
     seg A ← PB0 ┤1        28├ PC5 → DS18B20 DQ
-  PWM fan ← PB1 ┤2        27├ PC4 → seg E
-   heater ← PB2 ┤3        26├ PC3 → seg D
-           PB3 ┤4        25├ PC2 → seg DP
-           PB4 ┤5        24├ PC1 → seg G
-           PB5 ┤6        23├ PC0 → seg C
+  PWM fan ← PB1 ┄2        27┤ PC4 → seg G
+   heater ← PB2 ┄3        26┤ PC3 → seg C
+           PB3 ┄4        25┤ PC2 → seg DP
+           PB4 ┄5        24┤ PC1 → seg D
+           PB5 ┄6        23┤ PC0 → seg E
                ┤7        22├ GND
                ┤8        21├ AREF
                ┤9        20├ VCC

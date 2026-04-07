@@ -28,8 +28,8 @@
  *           PB2 = topná spirála (active HIGH)
  *           PB3..PB5 = ISP (MOSI, MISO, SCK) / volné
  *
- *   PORTC:  PC0 = seg C        PC3 = seg D
- *           PC1 = seg G        PC4 = seg E
+ *   PORTC:  PC0 = seg E        PC3 = seg C
+ *           PC1 = seg D        PC4 = seg G
  *           PC2 = seg DP       PC5 = DS18B20 DQ (+ 4.7kΩ pull-up)
  *
  *   PORTD:  PD0 = DIG3 (jednotky)   PD3 = ENC CLK (A)
@@ -42,11 +42,11 @@
  *                         ATmega8 (DIP-28)
  *                      ┌────────────────────┐
  *         seg A ← PB0 ─┤1  (PC5) RESET   28├─ PC5 → DS18B20 DQ
- *     PWM fan ← PB1 ─┤2  (PC4)  ADC5   27├─ PC4 → seg E
- *      heater ← PB2 ─┤3  (PC3)  ADC4   26├─ PC3 → seg D
+ *     PWM fan ← PB1 ─┤2  (PC4)  ADC5   27├─ PC4 → seg G
+ *      heater ← PB2 ─┤3  (PC3)  ADC4   26├─ PC3 → seg C
  *    ISP MOSI   PB3 ─┤4  (PC2)  ADC3   25├─ PC2 → seg DP
- *    ISP MISO   PB4 ─┤5  (PC1)  ADC2   24├─ PC1 → seg G
- *     ISP SCK   PB5 ─┤6  (PC0)  ADC1   23├─ PC0 → seg C
+ *    ISP MISO   PB4 ─┤5  (PC1)  ADC2   24├─ PC1 → seg D
+ *     ISP SCK   PB5 ─┤6  (PC0)  ADC1   23├─ PC0 → seg E
  *                     ─┤7  AVCC         22├─ GND
  *                     ─┤8  AREF         21├─ AREF
  *               VCC  ─┤9  VCC          20├─ VCC
@@ -134,18 +134,18 @@ static const uint8_t seg_b[] = {
     0x01, /* 9: A */
 };
 
-/*         C=PC0  G=PC1  DP=PC2  D=PC3  E=PC4 */
+/*         E=PC0  D=PC1  DP=PC2  C=PC3  G=PC4 */
 static const uint8_t seg_c[] = {
-    0x19, /* 0: C,D,E         = (1<<0)|(1<<3)|(1<<4) */
-    0x01, /* 1: C             = (1<<0) */
-    0x1A, /* 2: G,D,E         = (1<<1)|(1<<3)|(1<<4) */
-    0x0B, /* 3: G,C,D         = (1<<0)|(1<<1)|(1<<3) */
-    0x03, /* 4: G,C           = (1<<0)|(1<<1) */
-    0x0B, /* 5: G,C,D         = (1<<0)|(1<<1)|(1<<3) */
-    0x1B, /* 6: G,C,D,E       = (1<<0)|(1<<1)|(1<<3)|(1<<4) */
-    0x01, /* 7: C             = (1<<0) */
-    0x1B, /* 8: G,C,D,E       = (1<<0)|(1<<1)|(1<<3)|(1<<4) */
-    0x0B, /* 9: G,C,D         = (1<<0)|(1<<1)|(1<<3) */
+    0x0B, /* 0: C,D,E         = (1<<3)|(1<<1)|(1<<0) */
+    0x08, /* 1: C             = (1<<3) */
+    0x13, /* 2: D,E,G         = (1<<1)|(1<<0)|(1<<4) */
+    0x1A, /* 3: C,D,G         = (1<<3)|(1<<1)|(1<<4) */
+    0x18, /* 4: C,G           = (1<<3)|(1<<4) */
+    0x1A, /* 5: C,D,G         = (1<<3)|(1<<1)|(1<<4) */
+    0x1B, /* 6: C,D,E,G       = (1<<3)|(1<<1)|(1<<0)|(1<<4) */
+    0x08, /* 7: C             = (1<<3) */
+    0x1B, /* 8: C,D,E,G       = (1<<3)|(1<<1)|(1<<0)|(1<<4) */
+    0x1A, /* 9: C,D,G         = (1<<3)|(1<<1)|(1<<4) */
 };
 
 /*         B=PD6  F=PD7 */
@@ -473,7 +473,7 @@ static void pwm_set(uint8_t step)
 
 /* Zobrazit fan speed: "FXX" (0-90%) nebo "100" */
 #define CHAR_F_B  0x01        /* A=PB0 */
-#define CHAR_F_C  0x12        /* G=PC1, E=PC4 */
+#define CHAR_F_C  0x11        /* E=PC0, G=PC4 */
 #define CHAR_F_D  0x80        /* F=PD7 */
 
 static void display_fan(uint8_t fan_pct)
