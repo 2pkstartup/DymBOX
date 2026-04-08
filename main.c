@@ -32,9 +32,9 @@
  *           PC1 = seg D        PC4 = seg G
  *           PC2 = seg DP       PC5 = DS18B20 DQ (+ 4.7kΩ pull-up)
  *
- *   PORTD:  PD0 = DIG3 (jednotky)   PD3 = ENC CLK (A)
- *           PD1 = DIG2 (desítky)    PD4 = ENC DT  (B)
- *           PD2 = DIG1 (stovky)     PD5 = ENC SW  (tlačítko)
+ *   PORTD:  PD0 = ENC SW (tlačítko) PD3 = ENC CLK (A)
+ *           PD1 = DIG3 (jednotky)   PD4 = ENC DT  (B)
+ *           PD2 = DIG2 (desítky)    PD5 = DIG1 (stovky)
  *           PD6 = seg B             PD7 = seg F
  *
  * Schéma:
@@ -53,12 +53,12 @@
  *               GND  ─┤10 GND          19├─ PB5 (SCK)
  *              XTAL1 ─┤11              18├─ PB4 (MISO)
  *              XTAL2 ─┤12              17├─ PB3 (MOSI)
- *        DIG3 ← PD0 ─┤13 (RXD)        16├─ PB2 → heater
- *        DIG2 ← PD1 ─┤14 (TXD)        15├─ PB1 → PWM fan
- *        DIG1 ← PD2 ─┤15 (INT0)       14├─ PD7 → seg F
+ *      ENC SW → PD0 ─┤13 (RXD)        16├─ PB2 → heater
+ *        DIG3 ← PD1 ─┤14 (TXD)        15├─ PB1 → PWM fan
+ *        DIG2 ← PD2 ─┤15 (INT0)       14├─ PD7 → seg F
  *     ENC CLK → PD3 ─┤16 (INT1)       13├─ PD6 → seg B
  *      ENC DT → PD4 ─┤17 (T0)
- *      ENC SW → PD5 ─┤18 (T1)
+ *        DIG1 ← PD5 ─┤18 (T1)
  *                      └────────────────────┘
  *
  *   Display: common anode, segmenty active LOW
@@ -88,12 +88,12 @@
 #define SEG_D_MASK  ((1 << PD6)|(1 << PD7))                              /* B,F */
 
 /* Maska digit-select pinů na PORTD */
-#define DIG_MASK    ((1 << PD0)|(1 << PD1)|(1 << PD2))
+#define DIG_MASK    ((1 << PD1)|(1 << PD2)|(1 << PD5))
 
 /* Rotační enkodér KY-040 na PORTD */
 #define ENC_CLK     PD3
 #define ENC_DT      PD4
-#define ENC_SW      PD5
+#define ENC_SW      PD0
 #define ENC_MASK    ((1 << ENC_CLK)|(1 << ENC_DT)|(1 << ENC_SW))
 
 /* DS18B20 1-Wire na PC5 */
@@ -110,8 +110,8 @@
 #define HEATER_PERIOD  4880   /* 10 s perioda (488 Hz × 10) */
 #define HEATER_HYST    25     /* hystereze 5.0°C (v 1/10 °C) */
 
-/* Pin pro každou pozici: DIG1(stovky)=PD2, DIG2(desítky)=PD1, DIG3(jednotky)=PD0 */
-static const uint8_t dig_pin[] = {PD2, PD1, PD0};
+/* Pin pro každou pozici: DIG1(stovky)=PD5, DIG2(desítky)=PD2, DIG3(jednotky)=PD1 */
+static const uint8_t dig_pin[] = {PD5, PD2, PD1};
 
 /*
  * Lookup tabulky: bity = piny, které mají být LOW (aktivní) pro danou číslici.
@@ -237,8 +237,8 @@ static void display_init(void)
     DDRC  = SEG_C_MASK;
     PORTC = 0x3F;
 
-    /* PORTD: PD0-PD2 výstup (digit), PD6-PD7 výstup (seg B,F), PD3-PD5 vstup s pull-up */
-    DDRD  = DIG_MASK | SEG_D_MASK;  /* PD3,PD4,PD5 zůstávají vstup */
+    /* PORTD: PD1,PD2,PD5 výstup (digit), PD6-PD7 výstup (seg B,F), PD0,PD3,PD4 vstup s pull-up */
+    DDRD  = DIG_MASK | SEG_D_MASK;  /* PD0,PD3,PD4 zůstávají vstup */
     PORTD = 0xFF;                   /* pull-up na všech (i enkodér) */
 
     /* Timer0: prescaler 64, overflow interrupt */

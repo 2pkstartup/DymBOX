@@ -30,9 +30,9 @@ Regulátor teploty postavený na mikrokontroléru **ATmega8** s 3-místným 7-se
 
 | Číslice | Pin | Pozice |
 |---------|-----|--------|
-| DIG1    | PD2 | Stovky |
-| DIG2    | PD1 | Desítky |
-| DIG3    | PD0 | Jednotky |
+| DIG1    | PD5 | Stovky |
+| DIG2    | PD2 | Desítky |
+| DIG3    | PD1 | Jednotky |
 
 ### Rotační enkodér KY-040
 
@@ -40,7 +40,7 @@ Regulátor teploty postavený na mikrokontroléru **ATmega8** s 3-místným 7-se
 |--------|-----|
 | CLK (A) | PD3 |
 | DT (B)  | PD4 |
-| SW       | PD5 |
+| SW       | PD0 |
 | +        | VCC |
 | GND      | GND |
 
@@ -65,8 +65,8 @@ Regulátor teploty postavený na mikrokontroléru **ATmega8** s 3-místným 7-se
 PORTB: PB0 = seg A       PB1 = PWM fan    PB2 = heater    PB3–PB5 = volné
 PORTC: PC0 = seg E       PC1 = seg D      PC2 = seg DP    PC3 = seg C
        PC4 = seg G       PC5 = DS18B20
-PORTD: PD0 = DIG3        PD1 = DIG2       PD2 = DIG1
-       PD3 = ENC CLK     PD4 = ENC DT     PD5 = ENC SW
+PORTD: PD0 = ENC SW      PD1 = DIG3       PD2 = DIG2
+       PD3 = ENC CLK     PD4 = ENC DT     PD5 = DIG1
        PD6 = seg B       PD7 = seg F
 ```
 
@@ -165,12 +165,12 @@ Hlavní konstanty v `main.c`:
                ┤8        21├ AREF
                ┤9        20├ VCC
                ┤10       19├ PB5 (SCK)
-    DIG3 ← PD0 ┤11       18├ PB4 (MISO)
-    DIG2 ← PD1 ┤12       17├ PB3 (MOSI)
-    DIG1 ← PD2 ┤13       16├ PB2
+  ENC SW → PD0 ┤11       18├ PB4 (MISO)
+    DIG3 ← PD1 ┤12       17├ PB3 (MOSI)
+    DIG2 ← PD2 ┤13       16├ PB2
  ENC CLK → PD3 ┤14       15├ PB1
   ENC DT → PD4 ┤15       14├ PD7 → seg F
-  ENC SW → PD5 ┤16       13├ PD6 → seg B
+    DIG1 ← PD5 ┤16       13├ PD6 → seg B
                  └───────────┘
 ```
 
