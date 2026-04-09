@@ -1,0 +1,174 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The target system is: Generic -  - avr
+      The host system is: Linux - 6.17.0-19-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/avr-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/herzog/_dev/avr/dymbox/build/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/herzog/_dev/avr/dymbox/build/CMakeFiles/CMakeScratch/TryCompile-X5Mga3"
+      binary: "/home/herzog/_dev/avr/dymbox/build/CMakeFiles/CMakeScratch/TryCompile-X5Mga3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/herzog/_dev/avr/dymbox/build/CMakeFiles/CMakeScratch/TryCompile-X5Mga3'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1ef11/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1ef11.dir/build.make CMakeFiles/cmTC_1ef11.dir/build
+        gmake[1]: Entering directory '/home/herzog/_dev/avr/dymbox/build/CMakeFiles/CMakeScratch/TryCompile-X5Mga3'
+        Building C object CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj
+        /usr/bin/avr-gcc   -v -o CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        Reading specs from /usr/lib/gcc/avr/7.3.0/device-specs/specs-avr2
+        COLLECT_GCC=/usr/bin/avr-gcc
+        Target: avr
+        Configured with: ../gcc/configure -v --enable-languages=c,c++ --prefix=/usr/lib --infodir=/usr/share/info --mandir=/usr/share/man --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --enable-shared --with-system-zlib --enable-long-long --enable-nls --without-included-gettext --disable-libssp --disable-libcc1 --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=avr --enable-host-pie ASFLAGS= ASFLAGS_FOR_BUILD= CFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat  -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'CFLAGS_FOR_BUILD=-g -O2' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CPPFLAGS_FOR_BUILD= CXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat  -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'CXXFLAGS_FOR_BUILD=-g -O2' DFLAGS=-frelease DFLAGS_FOR_BUILD=-frelease FCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'FCFLAGS_FOR_BUILD=-g -O2' FFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'FFLAGS_FOR_BUILD=-g -O2' GCJFLAGS=-fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1 LDFLAGS='-Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z,relro' LDFLAGS_FOR_BUILD= OBJCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat  -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'OBJCFLAGS_FOR_BUILD=-g -O2' OBJCXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat  -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'OBJCXXFLAGS_FOR_BUILD=-g -O2'
+        Thread model: single
+        gcc version 7.3.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj' '-c' '-specs=device-specs/specs-avr2'
+         /usr/lib/gcc/avr/7.3.0/cc1 -quiet -v /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -mn-flash=1 -mskip-bug -quiet -dumpbase CMakeCCompilerABI.c -auxbase-strip CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj -version -o /tmp/cc5momQX.s
+        GNU C11 (GCC) version 7.3.0 (avr)
+        	compiled by GNU C version 13.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/avr/7.3.0/../../../avr/sys-include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/avr/7.3.0/include
+         /usr/lib/gcc/avr/7.3.0/include-fixed
+         /usr/lib/gcc/avr/7.3.0/../../../avr/include
+        End of search list.
+        GNU C11 (GCC) version 7.3.0 (avr)
+        	compiled by GNU C version 13.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: d424640f146a9b01cb085bf03b2e9b9d
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj' '-c' '-specs=device-specs/specs-avr2'
+         /usr/lib/gcc/avr/7.3.0/../../../avr/bin/as -mmcu=avr2 -o CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj /tmp/cc5momQX.s
+        COMPILER_PATH=/usr/lib/gcc/avr/7.3.0/:/usr/lib/gcc/avr/7.3.0/:/usr/lib/gcc/avr/:/usr/lib/gcc/avr/7.3.0/:/usr/lib/gcc/avr/:/usr/lib/gcc/avr/7.3.0/../../../avr/bin/
+        LIBRARY_PATH=/usr/lib/gcc/avr/7.3.0/:/usr/lib/gcc/avr/7.3.0/../../../avr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj' '-c' '-specs=device-specs/specs-avr2'
+        Linking C static library libcmTC_1ef11.a
+        /usr/bin/cmake -P CMakeFiles/cmTC_1ef11.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ef11.dir/link.txt --verbose=1
+        /usr/bin/avr-ar qc libcmTC_1ef11.a CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj
+        /usr/bin/avr-ranlib libcmTC_1ef11.a
+        gmake[1]: Leaving directory '/home/herzog/_dev/avr/dymbox/build/CMakeFiles/CMakeScratch/TryCompile-X5Mga3'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/avr/7.3.0/include]
+          add: [/usr/lib/gcc/avr/7.3.0/include-fixed]
+          add: [/usr/lib/gcc/avr/7.3.0/../../../avr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/avr/7.3.0/include] ==> [/usr/lib/gcc/avr/7.3.0/include]
+        collapse include dir [/usr/lib/gcc/avr/7.3.0/include-fixed] ==> [/usr/lib/gcc/avr/7.3.0/include-fixed]
+        collapse include dir [/usr/lib/gcc/avr/7.3.0/../../../avr/include] ==> [/usr/lib/avr/include]
+        implicit include dirs: [/usr/lib/gcc/avr/7.3.0/include;/usr/lib/gcc/avr/7.3.0/include-fixed;/usr/lib/avr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(avr-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/herzog/_dev/avr/dymbox/build/CMakeFiles/CMakeScratch/TryCompile-X5Mga3']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1ef11/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_1ef11.dir/build.make CMakeFiles/cmTC_1ef11.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/herzog/_dev/avr/dymbox/build/CMakeFiles/CMakeScratch/TryCompile-X5Mga3']
+        ignore line: [Building C object CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/usr/bin/avr-gcc   -v -o CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /usr/lib/gcc/avr/7.3.0/device-specs/specs-avr2]
+        ignore line: [COLLECT_GCC=/usr/bin/avr-gcc]
+        ignore line: [Target: avr]
+        ignore line: [Configured with: ../gcc/configure -v --enable-languages=c c++ --prefix=/usr/lib --infodir=/usr/share/info --mandir=/usr/share/man --bindir=/usr/bin --libexecdir=/usr/lib --libdir=/usr/lib --enable-shared --with-system-zlib --enable-long-long --enable-nls --without-included-gettext --disable-libssp --disable-libcc1 --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=avr --enable-host-pie ASFLAGS= ASFLAGS_FOR_BUILD= CFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat  -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'CFLAGS_FOR_BUILD=-g -O2' CPPFLAGS='-Wdate-time -D_FORTIFY_SOURCE=2' CPPFLAGS_FOR_BUILD= CXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat  -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'CXXFLAGS_FOR_BUILD=-g -O2' DFLAGS=-frelease DFLAGS_FOR_BUILD=-frelease FCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'FCFLAGS_FOR_BUILD=-g -O2' FFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'FFLAGS_FOR_BUILD=-g -O2' GCJFLAGS=-fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1 LDFLAGS='-Wl -Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl -z relro' LDFLAGS_FOR_BUILD= OBJCFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat  -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'OBJCFLAGS_FOR_BUILD=-g -O2' OBJCXXFLAGS='-g -O2 -ffile-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat  -fcf-protection -fdebug-prefix-map=/build/gcc-avr-TYLliY/gcc-avr-7.3.0+Atmel3.7.0=/usr/src/gcc-avr-1:7.3.0+Atmel3.7.0-1' 'OBJCXXFLAGS_FOR_BUILD=-g -O2']
+        ignore line: [Thread model: single]
+        ignore line: [gcc version 7.3.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj' '-c' '-specs=device-specs/specs-avr2']
+        ignore line: [ /usr/lib/gcc/avr/7.3.0/cc1 -quiet -v /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -mn-flash=1 -mskip-bug -quiet -dumpbase CMakeCCompilerABI.c -auxbase-strip CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj -version -o /tmp/cc5momQX.s]
+        ignore line: [GNU C11 (GCC) version 7.3.0 (avr)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/avr/7.3.0/../../../avr/sys-include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/avr/7.3.0/include]
+        ignore line: [ /usr/lib/gcc/avr/7.3.0/include-fixed]
+        ignore line: [ /usr/lib/gcc/avr/7.3.0/../../../avr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C11 (GCC) version 7.3.0 (avr)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: d424640f146a9b01cb085bf03b2e9b9d]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj' '-c' '-specs=device-specs/specs-avr2']
+        ignore line: [ /usr/lib/gcc/avr/7.3.0/../../../avr/bin/as -mmcu=avr2 -o CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj /tmp/cc5momQX.s]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/avr/7.3.0/:/usr/lib/gcc/avr/7.3.0/:/usr/lib/gcc/avr/:/usr/lib/gcc/avr/7.3.0/:/usr/lib/gcc/avr/:/usr/lib/gcc/avr/7.3.0/../../../avr/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/avr/7.3.0/:/usr/lib/gcc/avr/7.3.0/../../../avr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj' '-c' '-specs=device-specs/specs-avr2']
+        ignore line: [Linking C static library libcmTC_1ef11.a]
+        ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_1ef11.dir/cmake_clean_target.cmake]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ef11.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/avr-ar qc libcmTC_1ef11.a CMakeFiles/cmTC_1ef11.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/usr/bin/avr-ranlib libcmTC_1ef11.a]
+        ignore line: [gmake[1]: Leaving directory '/home/herzog/_dev/avr/dymbox/build/CMakeFiles/CMakeScratch/TryCompile-X5Mga3']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+...

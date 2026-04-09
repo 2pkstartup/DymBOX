@@ -1,0 +1,1 @@
+/usr/bin/avr-gcc -mmcu=atmega8 CMakeFiles/dymbox.elf.dir/main.c.obj -o dymbox.elf 

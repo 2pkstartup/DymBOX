@@ -1,0 +1,5 @@
+/home/herzog/_dev/avr/dymbox/build/CMakeFiles/dymbox.elf.dir
+/home/herzog/_dev/avr/dymbox/build/CMakeFiles/flash.dir
+/home/herzog/_dev/avr/dymbox/build/CMakeFiles/fuses.dir
+/home/herzog/_dev/avr/dymbox/build/CMakeFiles/edit_cache.dir
+/home/herzog/_dev/avr/dymbox/build/CMakeFiles/rebuild_cache.dir
