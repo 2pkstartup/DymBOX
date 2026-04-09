@@ -7,7 +7,7 @@ Regulátor teploty postavený na mikrokontroléru **ATmega8** s 3-místným 7-se
 - **Měření teploty** – DS18B20 (1-Wire), rozlišení 0.1 °C
 - **3-místný 7-segment display** – multiplexovaný v Timer0 ISR (~163 Hz/číslice)
 - **Rotační enkodér KY-040** – nastavení žádané teploty a otáček ventilátoru
-- **PWM ventilátor** – 11 kroků (0–100 % po 10 %), Timer1 Fast PWM 8-bit na 62.5 kHz
+- **PWM ventilátor** – 11 kroků (0–100 % po 10 %), Timer1 Fast PWM 8-bit na ~977 Hz
 - **Topná spirála** – ON/OFF regulace s hysterezí 5 °C, signalizace DP3
 - **Nastavitelný setpoint** – výchozí 32.0 °C, editace po 0.1 °C
 
@@ -56,7 +56,7 @@ Regulátor teploty postavený na mikrokontroléru **ATmega8** s 3-místným 7-se
 
 | Funkce | Pin | Typ |
 |--------|-----|-----|
-| Ventilátor (PWM) | PB1 (OC1A) | Fast PWM 62.5 kHz |
+| Ventilátor (PWM) | PB1 (OC1A) | Fast PWM ~977 Hz |
 | Topná spirála     | PB2        | SW ON/OFF (active LOW) |
 
 ### Souhrn obsazení pinů
