@@ -1,0 +1,23 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,10.0.0*%
+%TF.CreationDate,2026-04-08T10:46:19+02:00*%
+%TF.ProjectId,DymBOX_AVR,44796d42-4f58-45f4-9156-522e6b696361,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 10.0.0) date 2026-04-08 10:46:19*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.050000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X118500000Y-37000000D02*
+X178586504Y-37000000D01*
+X178586504Y-139949844D01*
+X118500000Y-139949844D01*
+X118500000Y-37000000D01*
+M02*

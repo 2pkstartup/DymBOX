@@ -198,7 +198,10 @@
         0.254,
         0.381,
         0.508,
-        1.016
+        1.016,
+        2.032,
+        3.048,
+        4.064
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -525,7 +528,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "gerber/",
       "specctra_dsn": "",
       "vrml": ""
     },
@@ -649,7 +652,7 @@
         "uuid": "586f9677-488d-4753-8c82-bcf4ec642766"
       }
     ],
-    "used_designators": "D1-2,J1,#PWR22,#PWR32-35,R16-17",
+    "used_designators": "J6-9",
     "variants": []
   },
   "sheets": [
