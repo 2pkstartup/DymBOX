@@ -488,9 +488,7 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [
-      "2pkstartup"
-    ],
+    "pinned_footprint_libs": [],
     "pinned_symbol_libs": []
   },
   "meta": {
@@ -654,7 +652,7 @@
         "uuid": "586f9677-488d-4753-8c82-bcf4ec642766"
       }
     ],
-    "used_designators": "#PWR13,SW2,J1-4,J6-9",
+    "used_designators": "U2",
     "variants": []
   },
   "sheets": [
