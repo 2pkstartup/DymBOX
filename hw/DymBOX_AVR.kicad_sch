@@ -135,7 +135,411 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Conn_01x03_Pin"
+		(symbol "2pkstartup:RotaryEncoder_Switch"
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 0 6.604 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "RotaryEncoder_Switch"
+				(at 0 -6.604 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -3.81 4.064 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 6.604 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "rotary switch encoder switch push button"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "RotaryEncoder*Switch*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RotaryEncoder_Switch_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 2.54) (xy -3.81 2.54) (xy -3.81 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 0) (xy -3.81 0) (xy -3.81 -1.016) (xy -3.302 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -2.54) (xy -3.81 -2.54) (xy -3.81 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.318 0) (xy -3.81 0) (xy -3.81 1.016) (xy -3.302 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.81 0)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.778) (xy -0.635 1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -0.381 0)
+					(radius 1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.381 -1.778) (xy -0.381 1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.381 -2.794)
+					(mid -3.0988 -0.0635)
+					(end -0.381 2.667)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.127 1.778) (xy -0.127 -1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 2.921) (xy -0.508 2.667) (xy 0.127 2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 -3.048) (xy -0.508 -2.794) (xy 0.127 -2.413)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 1.016) (xy 3.81 -1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 0) (xy 3.429 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 4.318 1.016)
+					(radius 0.127)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 4.318 -1.016)
+					(radius 0.127)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 4.318 2.54) (xy 4.318 1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 4.318 -2.54) (xy 4.318 -1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RotaryEncoder_Switch_1_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "S1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "S2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:Screw_Terminal_01x02"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -146,7 +550,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 5.08 0)
+				(at 0 2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -155,7 +559,7 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x03_Pin"
+			(property "Value" "Screw_Terminal_01x02"
 				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -187,7 +591,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x03, script generated"
+			(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -198,17 +602,7 @@
 					)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
+			(property "ki_keywords" "screw terminal"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -219,7 +613,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(property "ki_fp_filters" "TerminalBlock*:*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -230,43 +624,21 @@
 					)
 				)
 			)
-			(symbol "Conn_01x03_Pin_1_1"
+			(symbol "Screw_Terminal_01x02_1_1"
 				(rectangle
-					(start 0.8636 2.667)
-					(end 0 2.413)
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
 					(stroke
-						(width 0.1524)
+						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
+						(type background)
 					)
 				)
 				(polyline
 					(pts
-						(xy 1.27 2.54) (xy 0.8636 2.54)
+						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
 					)
 					(stroke
 						(width 0.1524)
@@ -278,7 +650,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 0) (xy 0.8636 0)
+						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
 					)
 					(stroke
 						(width 0.1524)
@@ -290,8 +662,42 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+						(xy -0.3556 0.508) (xy 0.508 -0.3302)
 					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -2.54)
+					(radius 0.635)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -301,7 +707,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 2.54 180)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -319,7 +725,248 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 0 180)
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:Screw_Terminal_01x03"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Screw_Terminal_01x03"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "screw terminal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TerminalBlock*:*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Screw_Terminal_01x03_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 2.8702) (xy 0.3302 2.032)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 3.048) (xy 0.508 2.2098)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 0.508) (xy 0.508 -0.3302)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -337,7 +984,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 -2.54 180)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -1867,410 +2514,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:RotaryEncoder_Switch"
-			(pin_names
-				(offset 0.254)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "SW"
-				(at 0 6.604 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "RotaryEncoder_Switch"
-				(at 0 -6.604 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -3.81 4.064 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 6.604 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "rotary switch encoder switch push button"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "RotaryEncoder*Switch*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RotaryEncoder_Switch_0_1"
-				(rectangle
-					(start -5.08 5.08)
-					(end 5.08 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 2.54) (xy -3.81 2.54) (xy -3.81 2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 0) (xy -3.81 0) (xy -3.81 -1.016) (xy -3.302 -2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 -2.54) (xy -3.81 -2.54) (xy -3.81 -2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -4.318 0) (xy -3.81 0) (xy -3.81 1.016) (xy -3.302 2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -3.81 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -1.778) (xy -0.635 1.778)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -0.381 0)
-					(radius 1.905)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.381 -1.778) (xy -0.381 1.778)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.381 -2.794)
-					(mid -3.0988 -0.0635)
-					(end -0.381 2.667)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.127 1.778) (xy -0.127 -1.778)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 2.921) (xy -0.508 2.667) (xy 0.127 2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 -3.048) (xy -0.508 -2.794) (xy 0.127 -2.413)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 1.016) (xy 3.81 -1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 0) (xy 3.429 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 4.318 1.016)
-					(radius 0.127)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 4.318 -1.016)
-					(radius 0.127)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 4.318 2.54) (xy 4.318 1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -2.54) (xy 4.318 -2.54) (xy 4.318 -1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RotaryEncoder_Switch_1_1"
-				(pin passive line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 2.54)
-					(name "S1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "S1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 2.54)
-					(name "S2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "S2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5686,6 +5929,12 @@
 		(uuid "02920058-b369-4327-a58e-70d4ac9719a6")
 	)
 	(junction
+		(at 96.52 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "083a13ec-9586-4ccb-9c73-e8f6cbde5ff4")
+	)
+	(junction
 		(at 53.34 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5696,6 +5945,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1a0a3f4b-0903-4b7f-b282-02f484f4d751")
+	)
+	(junction
+		(at 110.49 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "50f6cf2f-4b3a-4419-abc3-7519a8ef0749")
 	)
 	(junction
 		(at 60.96 60.96)
@@ -5734,12 +5989,6 @@
 		(uuid "9afe4fc1-ef63-49bb-9d04-d721932462ea")
 	)
 	(junction
-		(at 96.52 123.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a719a545-640b-4882-b311-2e04e871e405")
-	)
-	(junction
 		(at 102.87 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5762,8 +6011,8 @@
 		(uuid "5755328c-f477-40fa-bafb-49f35b11326b")
 	)
 	(no_connect
-		(at 167.64 45.72)
-		(uuid "77a084f8-d323-414f-ad01-fdb4c9d4fa4b")
+		(at 167.64 53.34)
+		(uuid "795de978-3e80-4ec2-87dc-dac2244fd295")
 	)
 	(no_connect
 		(at 102.87 69.85)
@@ -5891,6 +6140,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 88.9) (xy 110.49 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4157eed1-22af-4a7e-9a9a-49fe6b00fdcb")
+	)
+	(wire
+		(pts
 			(xy 138.43 67.31) (xy 142.24 67.31)
 		)
 		(stroke
@@ -5991,16 +6250,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 48.26) (xy 198.12 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "709537f1-1134-4d7e-ae1d-0df4798b2812")
-	)
-	(wire
-		(pts
 			(xy 82.55 138.43) (xy 86.36 138.43)
 		)
 		(stroke
@@ -6061,7 +6310,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 68.58) (xy 190.5 66.04)
+			(xy 187.96 66.04) (xy 187.96 63.5)
 		)
 		(stroke
 			(width 0)
@@ -6071,7 +6320,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 66.04) (xy 203.2 63.5)
+			(xy 200.66 63.5) (xy 200.66 60.96)
 		)
 		(stroke
 			(width 0)
@@ -6118,6 +6367,16 @@
 			(type default)
 		)
 		(uuid "928ec6d6-9868-4b23-a165-82e081ed4749")
+	)
+	(wire
+		(pts
+			(xy 167.64 45.72) (xy 195.58 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98bbf88f-e524-4211-b4a9-625890044fbc")
 	)
 	(wire
 		(pts
@@ -6181,16 +6440,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 50.8) (xy 185.42 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "acb99deb-e984-470f-b6e3-69f1f68ce006")
-	)
-	(wire
-		(pts
 			(xy 166.37 93.98) (xy 125.73 93.98)
 		)
 		(stroke
@@ -6228,6 +6477,16 @@
 			(type default)
 		)
 		(uuid "b62db9f9-baf8-47c7-aaed-efb488eb1885")
+	)
+	(wire
+		(pts
+			(xy 172.72 58.42) (xy 172.72 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba959b23-93f0-4068-962e-8dc3c914ff4e")
 	)
 	(wire
 		(pts
@@ -6328,6 +6587,26 @@
 			(type default)
 		)
 		(uuid "dd03d052-1798-44a5-a9f6-0f63007296ea")
+	)
+	(wire
+		(pts
+			(xy 116.84 88.9) (xy 110.49 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e027a97f-62c2-4045-a5ce-a14e51434622")
+	)
+	(wire
+		(pts
+			(xy 167.64 48.26) (xy 182.88 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0fc275e-110a-43da-a7bf-366a6910a084")
 	)
 	(wire
 		(pts
@@ -6570,7 +6849,7 @@
 		(uuid "a77628f3-124a-4dcb-94f0-f4abd7352f9d")
 	)
 	(label "DIG_1"
-		(at 190.5 68.58 0)
+		(at 187.96 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6750,7 +7029,7 @@
 		(uuid "f5f88adf-80ed-4565-8100-98b06fe58371")
 	)
 	(label "DIG_2"
-		(at 203.2 66.04 0)
+		(at 200.66 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7022,6 +7301,7 @@
 		(uuid "0e946f1b-ce2c-405e-a512-c7a73a469f26")
 		(property "Reference" "D1"
 			(at 113.03 85.0899 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7033,6 +7313,7 @@
 		)
 		(property "Value" "1N4148"
 			(at 113.03 87.6299 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7185,95 +7466,6 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "#PWR033")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:RotaryEncoder_Switch")
-		(at 130.81 69.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "17f3b8ba-7fca-403a-b49b-49715493fb94")
-		(property "Reference" "SW1"
-			(at 130.81 59.69 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "RotaryEncoder_Switch"
-			(at 130.81 62.23 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "2pkstartup:RotaryEncoder_Alps_EC12E-Switch_Vertical_H20mm_CircularMountingHoles"
-			(at 127 65.786 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 130.81 63.246 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch"
-			(at 130.81 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "B"
-			(uuid "8b8d0657-61af-4c2b-9a4d-00b9547e80b6")
-		)
-		(pin "S2"
-			(uuid "f61e381f-c054-4968-b301-5aa3f015ac07")
-		)
-		(pin "A"
-			(uuid "edc40e75-d7fd-4b3e-b467-68a939439527")
-		)
-		(pin "C"
-			(uuid "eb3031d7-c432-4c80-b9b1-85d8d28652f6")
-		)
-		(pin "S1"
-			(uuid "27d4ff19-cc2a-4ae4-a529-96b8a356d9e3")
-		)
-		(instances
-			(project "DymBOX_AVR"
-				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
-					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -7613,6 +7805,87 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 121.92 86.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2940ca5d-0804-442c-9ab7-0a44b1db5f3a")
+		(property "Reference" "J7"
+			(at 124.46 86.3599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x02"
+			(at 124.46 88.8999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
+			(at 121.92 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 121.92 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5fd559f4-e60f-4286-b068-cb67cff87046")
+		)
+		(pin "2"
+			(uuid "458fbcf0-be60-4f3b-8df0-52ba37108117")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -8034,91 +8307,6 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x03_Pin")
-		(at 105.41 123.19 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "36101231-5446-4ae4-be89-e853c0a1d99c")
-		(property "Reference" "J4"
-			(at 106.68 121.9199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "DS18B20"
-			(at 106.68 124.4599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_Wire:SolderWire-0.127sqmm_1x03_P3.7mm_D0.48mm_OD1mm"
-			(at 105.41 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 105.41 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x03, script generated"
-			(at 105.41 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "3d61b9ad-db0e-4f05-a4ae-558c066c929c")
-		)
-		(pin "3"
-			(uuid "286bc545-c98e-4062-bc03-f24f345a06f4")
-		)
-		(pin "1"
-			(uuid "8ebcb5ee-85fc-4d18-9432-8fdc5bcde014")
-		)
-		(instances
-			(project "DymBOX_AVR"
-				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
-					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -9573,7 +9761,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:BC327")
-		(at 172.72 55.88 90)
+		(at 172.72 53.34 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9583,7 +9771,7 @@
 		(dnp no)
 		(uuid "6f9f39d6-653d-489b-b6f7-338b7a92bf21")
 		(property "Reference" "Q1"
-			(at 169.418 54.864 90)
+			(at 169.418 52.324 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9594,7 +9782,7 @@
 			)
 		)
 		(property "Value" "BC327"
-			(at 169.672 57.15 90)
+			(at 169.672 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9605,7 +9793,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
-			(at 174.625 50.8 0)
+			(at 174.625 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9618,7 +9806,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
-			(at 172.72 55.88 0)
+			(at 172.72 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9630,7 +9818,7 @@
 			)
 		)
 		(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
-			(at 172.72 55.88 0)
+			(at 172.72 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9641,7 +9829,7 @@
 			)
 		)
 		(property "Sim.Device" "PNP"
-			(at 172.72 55.88 0)
+			(at 172.72 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9652,7 +9840,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 172.72 55.88 0)
+			(at 172.72 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9753,6 +9941,83 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 116.84 86.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "764383fb-d663-4b4e-85f3-787b7a01bced")
+		(property "Reference" "#PWR013"
+			(at 116.84 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 113.284 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 116.84 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4fee2b08-8695-468d-a06e-d850897f32ba")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -10161,7 +10426,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 208.28 48.26 270)
+		(at 205.74 45.72 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10171,7 +10436,7 @@
 		(dnp no)
 		(uuid "85898992-de09-47f7-927d-f8e852d185f4")
 		(property "Reference" "#PWR025"
-			(at 204.47 48.26 0)
+			(at 201.93 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10182,7 +10447,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 209.296 46.228 90)
+			(at 206.756 43.688 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10192,7 +10457,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 208.28 48.26 0)
+			(at 205.74 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10203,7 +10468,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 48.26 0)
+			(at 205.74 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10214,7 +10479,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 208.28 48.26 0)
+			(at 205.74 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10399,7 +10664,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:BC327")
-		(at 190.5 53.34 90)
+		(at 187.96 50.8 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10409,7 +10674,7 @@
 		(dnp no)
 		(uuid "92a34e25-36c0-46be-9635-8f61c5dfc79d")
 		(property "Reference" "Q2"
-			(at 187.452 54.102 90)
+			(at 184.912 51.562 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10420,7 +10685,7 @@
 			)
 		)
 		(property "Value" "BC327"
-			(at 189.992 56.134 90)
+			(at 187.452 53.594 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10431,7 +10696,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
-			(at 192.405 48.26 0)
+			(at 189.865 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10444,7 +10709,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
-			(at 190.5 53.34 0)
+			(at 187.96 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10456,7 +10721,7 @@
 			)
 		)
 		(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
-			(at 190.5 53.34 0)
+			(at 187.96 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10467,7 +10732,7 @@
 			)
 		)
 		(property "Sim.Device" "PNP"
-			(at 190.5 53.34 0)
+			(at 187.96 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10478,7 +10743,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 190.5 53.34 0)
+			(at 187.96 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10587,7 +10852,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 190.5 62.23 180)
+		(at 187.96 59.69 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10597,7 +10862,7 @@
 		(dnp no)
 		(uuid "95695751-3fb1-4cb0-bc97-aac39b715d89")
 		(property "Reference" "R11"
-			(at 187.198 60.452 0)
+			(at 184.658 57.912 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10607,7 +10872,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 190.5 62.23 90)
+			(at 187.96 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10617,7 +10882,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
-			(at 192.278 62.23 90)
+			(at 189.738 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10628,7 +10893,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 62.23 0)
+			(at 187.96 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10639,7 +10904,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 190.5 62.23 0)
+			(at 187.96 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10744,7 +11009,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:BC327")
-		(at 203.2 50.8 90)
+		(at 200.66 48.26 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10754,7 +11019,7 @@
 		(dnp no)
 		(uuid "97b88656-ca6d-4920-8daf-b07cd41f3e63")
 		(property "Reference" "Q5"
-			(at 200.66 52.832 90)
+			(at 198.12 50.292 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10765,7 +11030,7 @@
 			)
 		)
 		(property "Value" "BC327"
-			(at 202.438 55.118 90)
+			(at 199.898 52.578 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10776,7 +11041,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
-			(at 205.105 45.72 0)
+			(at 202.565 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10789,7 +11054,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
-			(at 203.2 50.8 0)
+			(at 200.66 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10801,7 +11066,7 @@
 			)
 		)
 		(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
-			(at 203.2 50.8 0)
+			(at 200.66 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10812,7 +11077,7 @@
 			)
 		)
 		(property "Sim.Device" "PNP"
-			(at 203.2 50.8 0)
+			(at 200.66 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10823,7 +11088,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 203.2 50.8 0)
+			(at 200.66 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11286,6 +11551,95 @@
 		)
 	)
 	(symbol
+		(lib_id "2pkstartup:RotaryEncoder_Switch")
+		(at 130.81 69.85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a2862d8c-6656-4f54-98de-d16f44a1d5a9")
+		(property "Reference" "SW2"
+			(at 130.81 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RotaryEncoder_Switch"
+			(at 130.81 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "2pkstartup:RotaryEncoder_Alps_EC12E-Switch_Vertical_H20mm_CircularMountingHoles"
+			(at 127 65.786 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 130.81 63.246 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch"
+			(at 130.81 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "S1"
+			(uuid "d582d906-93fc-4cfd-8054-6223c24985ff")
+		)
+		(pin "S2"
+			(uuid "38dabc64-edbb-4b1e-be5d-f9ab0e1b46e0")
+		)
+		(pin "B"
+			(uuid "9e6f142c-356d-46d6-b980-420b3fd07f30")
+		)
+		(pin "C"
+			(uuid "58a76bd8-e81e-4d44-86e3-9a8ebf74ab67")
+		)
+		(pin "A"
+			(uuid "a70f23d9-88df-429d-bf1c-95a5eedb4c82")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 43.18 96.52 90)
 		(unit 1)
@@ -11679,7 +12033,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 177.8 53.34 270)
+		(at 177.8 50.8 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11689,7 +12043,7 @@
 		(dnp no)
 		(uuid "bd3221a3-5577-4176-992b-232d68391a76")
 		(property "Reference" "#PWR023"
-			(at 173.99 53.34 0)
+			(at 173.99 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11700,7 +12054,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 178.054 55.88 90)
+			(at 178.054 53.34 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11710,7 +12064,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 177.8 53.34 0)
+			(at 177.8 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11721,7 +12075,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 53.34 0)
+			(at 177.8 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11732,7 +12086,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 177.8 53.34 0)
+			(at 177.8 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11911,7 +12265,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 195.58 50.8 270)
+		(at 193.04 48.26 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11921,7 +12275,7 @@
 		(dnp no)
 		(uuid "c981b0a5-868e-41e4-9b67-20a2781931cb")
 		(property "Reference" "#PWR024"
-			(at 191.77 50.8 0)
+			(at 189.23 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11932,7 +12286,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 194.564 49.276 90)
+			(at 192.024 46.736 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11943,7 +12297,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 195.58 50.8 0)
+			(at 193.04 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11954,7 +12308,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 50.8 0)
+			(at 193.04 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11965,7 +12319,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 195.58 50.8 0)
+			(at 193.04 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12465,7 +12819,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 203.2 59.69 180)
+		(at 200.66 57.15 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12475,7 +12829,7 @@
 		(dnp no)
 		(uuid "e587a9a0-0711-455b-af1d-2a02852a2f09")
 		(property "Reference" "R12"
-			(at 200.152 57.912 0)
+			(at 197.612 55.372 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12485,7 +12839,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 203.2 59.944 90)
+			(at 200.66 57.404 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12495,7 +12849,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
-			(at 204.978 59.69 90)
+			(at 202.438 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12506,7 +12860,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 59.69 0)
+			(at 200.66 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12517,7 +12871,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 203.2 59.69 0)
+			(at 200.66 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12693,6 +13047,91 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x03")
+		(at 105.41 123.19 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f1159c88-b759-4b90-a12b-6793bdc0c5a8")
+		(property "Reference" "J4"
+			(at 107.95 124.4601 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x03"
+			(at 107.95 121.9201 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-3.5-H_1x03_P3.50mm_Horizontal"
+			(at 105.41 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 105.41 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "34c1a421-10f9-4552-88b1-1f86a58a74a2")
+		)
+		(pin "1"
+			(uuid "a00ce54c-f753-4088-b502-45cd6d751dfc")
+		)
+		(pin "3"
+			(uuid "19ce315c-97a3-4ea8-a092-31fbb6709a6e")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "J4")
 					(unit 1)
 				)
 			)
