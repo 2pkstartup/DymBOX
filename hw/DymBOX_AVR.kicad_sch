@@ -141,8 +141,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -24.13 13.97 0)
+			(property "Reference" "U2"
+				(at -5.715 17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -152,7 +152,7 @@
 				)
 			)
 			(property "Value" "FYT-5631BUHR-21"
-				(at 19.05 13.97 0)
+				(at -5.715 15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -161,7 +161,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Display_7Segment:FYT-5631BUHR-21"
+			(property "Footprint" "2pkstartup:FYT-5631BUHR-21"
 				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -682,24 +682,6 @@
 						)
 					)
 					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 16.51 -10.16 180)
-					(length 2.54)
-					(name "CA4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2077,12 +2059,13 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:C_Polarized"
+		(symbol "Device:C_Polarized_Small"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
 				(offset 0.254)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2090,7 +2073,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "C"
-				(at 0.635 2.54 0)
+				(at 0.254 1.778 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2100,8 +2083,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "C_Polarized"
-				(at 0.635 -2.54 0)
+			(property "Value" "C_Polarized_Small"
+				(at 0.254 -2.032 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2112,7 +2095,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -2133,7 +2116,7 @@
 					)
 				)
 			)
-			(property "Description" "Polarized capacitor"
+			(property "Description" "Polarized capacitor, small symbol"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2166,34 +2149,10 @@
 					)
 				)
 			)
-			(symbol "C_Polarized_0_1"
+			(symbol "C_Polarized_Small_0_1"
 				(rectangle
-					(start -2.286 0.508)
-					(end 2.286 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 2.286) (xy -0.762 2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.794) (xy -1.27 1.778)
-					)
+					(start -1.524 0.6858)
+					(end 1.524 0.3048)
 					(stroke
 						(width 0)
 						(type default)
@@ -2203,8 +2162,8 @@
 					)
 				)
 				(rectangle
-					(start 2.286 -0.508)
-					(end -2.286 -1.016)
+					(start -1.524 -0.3048)
+					(end 1.524 -0.6858)
 					(stroke
 						(width 0)
 						(type default)
@@ -2213,11 +2172,35 @@
 						(type outline)
 					)
 				)
+				(polyline
+					(pts
+						(xy -1.27 1.524) (xy -0.762 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 1.27) (xy -1.016 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 			)
-			(symbol "C_Polarized_1_1"
+			(symbol "C_Polarized_Small_1_1"
 				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
+					(at 0 2.54 270)
+					(length 1.8542)
 					(name ""
 						(effects
 							(font
@@ -2234,8 +2217,8 @@
 					)
 				)
 				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
+					(at 0 -2.54 90)
+					(length 1.8542)
 					(name ""
 						(effects
 							(font
@@ -3049,6 +3032,186 @@
 				(pin passive line
 					(at 0 -3.81 90)
 					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:L_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "L"
+				(at 0.762 1.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "L_Small"
+				(at 0.762 -1.016 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Inductor, small symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "L_Small_0_1"
+				(arc
+					(start 0 2.032)
+					(mid 0.5058 1.524)
+					(end 0 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 1.016)
+					(mid 0.5058 0.508)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.5058 -0.508)
+					(end 0 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.016)
+					(mid 0.5058 -1.524)
+					(end 0 -2.032)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "L_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.508)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.508)
 					(name ""
 						(effects
 							(font
@@ -3999,17 +4162,14 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:L7805"
-			(pin_names
-				(offset 0.254)
-			)
+		(symbol "Regulator_Switching:AP63205WU"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -3.81 3.175 0)
+				(at -7.62 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -4018,32 +4178,18 @@
 					)
 				)
 			)
-			(property "Value" "L7805"
-				(at 0 3.175 0)
+			(property "Value" "AP63205WU"
+				(at 2.54 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" ""
-				(at 0.635 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-				)
-			)
-			(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf"
-				(at 0 -1.27 0)
+			(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+				(at 0 -22.86 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -4053,7 +4199,7 @@
 					)
 				)
 			)
-			(property "Description" "Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4064,7 +4210,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "Voltage Regulator 1.5A Positive"
+			(property "Description" "2A, 1.1MHz Buck DC/DC Converter, fixed 5.0V output voltage, TSOT-23-6"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4075,7 +4221,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "TO?252* TO?263* TO?220*"
+			(property "ki_keywords" "2A Buck DC/DC"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4086,10 +4232,21 @@
 					)
 				)
 			)
-			(symbol "L7805_0_1"
+			(property "ki_fp_filters" "TSOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "AP63205WU_0_1"
 				(rectangle
-					(start -5.08 1.905)
-					(end 5.08 -5.08)
+					(start -7.62 5.08)
+					(end 7.62 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -4099,9 +4256,45 @@
 					)
 				)
 			)
-			(symbol "L7805_1_1"
+			(symbol "AP63205WU_1_1"
+				(pin input line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin power_in line
-					(at -7.62 0 0)
+					(at -10.16 2.54 0)
 					(length 2.54)
 					(name "IN"
 						(effects
@@ -4110,7 +4303,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4128,7 +4321,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4136,17 +4329,35 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at 7.62 0 180)
+				(pin output line
+					(at 10.16 2.54 180)
 					(length 2.54)
-					(name "OUT"
+					(name "SW"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "BST"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5820,10 +6031,10 @@
 		)
 	)
 	(junction
-		(at 39.37 60.96)
+		(at 29.21 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "02920058-b369-4327-a58e-70d4ac9719a6")
+		(uuid "05b9e97d-a4fe-43ae-a0f9-ca3e0bd82061")
 	)
 	(junction
 		(at 96.52 123.19)
@@ -5832,28 +6043,28 @@
 		(uuid "083a13ec-9586-4ccb-9c73-e8f6cbde5ff4")
 	)
 	(junction
-		(at 53.34 68.58)
+		(at 62.23 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0c97f0d5-b070-4ea5-8f58-166e5f40e820")
+		(uuid "0dbfb30f-604f-4acf-89de-2bc94bea8bb5")
 	)
 	(junction
-		(at 44.45 60.96)
+		(at 36.83 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1a0a3f4b-0903-4b7f-b282-02f484f4d751")
+		(uuid "2d15a7e9-b979-4cbb-856f-ad3f34199caf")
+	)
+	(junction
+		(at 71.12 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3fcd92d6-a3fb-4084-8ef8-a0af01561f30")
 	)
 	(junction
 		(at 110.49 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "50f6cf2f-4b3a-4419-abc3-7519a8ef0749")
-	)
-	(junction
-		(at 60.96 60.96)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5b525580-4bf5-4b4f-b6de-aba4a02005e5")
 	)
 	(junction
 		(at 125.73 101.6)
@@ -5886,16 +6097,34 @@
 		(uuid "9afe4fc1-ef63-49bb-9d04-d721932462ea")
 	)
 	(junction
+		(at 74.93 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c0355946-0e33-4331-a78d-643698387078")
+	)
+	(junction
 		(at 102.87 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c64da739-45b2-476e-b435-45d02ab28f9d")
 	)
 	(junction
-		(at 44.45 68.58)
+		(at 74.93 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "de968e64-2de9-471d-9e70-a638cfff0ab6")
+		(uuid "d2a58107-372e-4f86-8c0c-1b117b07f01a")
+	)
+	(junction
+		(at 67.31 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d8ca593a-286f-4b0f-9d51-ce740ff984e1")
+	)
+	(junction
+		(at 78.74 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "edea870b-2387-4cef-b2ca-b5f541312005")
 	)
 	(junction
 		(at 118.11 106.68)
@@ -5904,12 +6133,12 @@
 		(uuid "f9aded8c-eccd-4445-a498-cfcfb41acfc5")
 	)
 	(no_connect
-		(at 102.87 67.31)
-		(uuid "5755328c-f477-40fa-bafb-49f35b11326b")
+		(at 166.37 109.22)
+		(uuid "104f4d5d-92cb-48ef-84f5-b9e15157f09a")
 	)
 	(no_connect
-		(at 167.64 53.34)
-		(uuid "795de978-3e80-4ec2-87dc-dac2244fd295")
+		(at 102.87 67.31)
+		(uuid "5755328c-f477-40fa-bafb-49f35b11326b")
 	)
 	(no_connect
 		(at 102.87 69.85)
@@ -5937,6 +6166,16 @@
 	)
 	(wire
 		(pts
+			(xy 71.12 64.77) (xy 74.93 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "071c3e10-7512-4261-9e6e-854707b8b0bb")
+	)
+	(wire
+		(pts
 			(xy 83.82 69.85) (xy 90.17 69.85)
 		)
 		(stroke
@@ -5957,6 +6196,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 69.85) (xy 57.15 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "188580e3-3fd8-4586-947b-4da693b72145")
+	)
+	(wire
+		(pts
 			(xy 82.55 118.11) (xy 86.36 118.11)
 		)
 		(stroke
@@ -5964,6 +6213,16 @@
 			(type default)
 		)
 		(uuid "1dc828a3-f2b2-4f2e-919b-20ff31b4a7f6")
+	)
+	(wire
+		(pts
+			(xy 29.21 64.77) (xy 29.21 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e7a4147-8809-4215-b114-f699446cc821")
 	)
 	(wire
 		(pts
@@ -5997,26 +6256,6 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 67.31) (xy 44.45 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3114d0da-0c17-49c9-bbc2-1ebdbc923746")
-	)
-	(wire
-		(pts
-			(xy 39.37 68.58) (xy 44.45 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "37c1cdea-8bcf-4355-a20b-d701f3522a4a")
-	)
-	(wire
-		(pts
 			(xy 82.55 100.33) (xy 86.36 100.33)
 		)
 		(stroke
@@ -6044,6 +6283,16 @@
 			(type default)
 		)
 		(uuid "4157eed1-22af-4a7e-9a9a-49fe6b00fdcb")
+	)
+	(wire
+		(pts
+			(xy 74.93 64.77) (xy 77.47 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48d52dd7-a6b2-45c3-83db-68e23d4d66a2")
 	)
 	(wire
 		(pts
@@ -6097,6 +6346,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 67.31) (xy 59.69 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "607761fd-4ce4-4179-900e-a82b4bf6c5ab")
+	)
+	(wire
+		(pts
 			(xy 96.52 123.19) (xy 100.33 123.19)
 		)
 		(stroke
@@ -6107,23 +6366,13 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 71.12) (xy 172.72 68.58)
+			(xy 161.29 71.12) (xy 161.29 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "61812d0f-5761-4064-8815-c84666087827")
-	)
-	(wire
-		(pts
-			(xy 39.37 60.96) (xy 44.45 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6384f571-141b-409e-b946-681d66c7adfa")
 	)
 	(wire
 		(pts
@@ -6144,6 +6393,16 @@
 			(type default)
 		)
 		(uuid "6bb58155-c19b-4d61-99ad-73ad09fcdf74")
+	)
+	(wire
+		(pts
+			(xy 36.83 64.77) (xy 36.83 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71cc8444-7b87-43d3-9489-a411acc2eec5")
 	)
 	(wire
 		(pts
@@ -6207,7 +6466,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 66.04) (xy 187.96 63.5)
+			(xy 176.53 66.04) (xy 176.53 63.5)
 		)
 		(stroke
 			(width 0)
@@ -6217,7 +6476,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 63.5) (xy 200.66 60.96)
+			(xy 189.23 63.5) (xy 189.23 60.96)
 		)
 		(stroke
 			(width 0)
@@ -6267,7 +6526,17 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 45.72) (xy 195.58 45.72)
+			(xy 71.12 64.77) (xy 71.12 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95af3cb9-abb5-44bd-8646-ee4d0d625fa4")
+	)
+	(wire
+		(pts
+			(xy 156.21 45.72) (xy 184.15 45.72)
 		)
 		(stroke
 			(width 0)
@@ -6297,13 +6566,13 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 60.96) (xy 45.72 60.96)
+			(xy 57.15 71.12) (xy 67.31 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a0d3a7aa-0703-45d7-a74e-ec58de3f2477")
+		(uuid "a043eb92-f53c-44ed-96cb-0d8a5b3e669c")
 	)
 	(wire
 		(pts
@@ -6337,6 +6606,26 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 69.85) (xy 62.23 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a62ff5fd-98dc-4572-9b96-893a93c115af")
+	)
+	(wire
+		(pts
+			(xy 74.93 64.77) (xy 74.93 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab0c4486-61a7-408c-8a2f-45ee1767767c")
+	)
+	(wire
+		(pts
 			(xy 166.37 93.98) (xy 125.73 93.98)
 		)
 		(stroke
@@ -6354,6 +6643,16 @@
 			(type default)
 		)
 		(uuid "b12ab31f-b293-45b4-b0f5-7364b1c2954e")
+	)
+	(wire
+		(pts
+			(xy 67.31 64.77) (xy 67.31 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b346e18d-f28c-4670-8eff-f2d448832e73")
 	)
 	(wire
 		(pts
@@ -6377,7 +6676,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 58.42) (xy 172.72 60.96)
+			(xy 161.29 58.42) (xy 161.29 60.96)
 		)
 		(stroke
 			(width 0)
@@ -6394,6 +6693,16 @@
 			(type default)
 		)
 		(uuid "bb590998-0cfe-484d-ac56-d3f07e63ada0")
+	)
+	(wire
+		(pts
+			(xy 29.21 64.77) (xy 36.83 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3d0e5cf-f55f-4ff7-88c3-8711c08c34e8")
 	)
 	(wire
 		(pts
@@ -6427,16 +6736,6 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 68.58) (xy 53.34 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce0535d1-00be-4d12-a2ee-c4f71fdbfb71")
-	)
-	(wire
-		(pts
 			(xy 52.07 96.52) (xy 52.07 97.79)
 		)
 		(stroke
@@ -6447,13 +6746,13 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 60.96) (xy 44.45 62.23)
+			(xy 57.15 64.77) (xy 62.23 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d20bb631-775b-4f2c-a6b2-acb512288f52")
+		(uuid "d6da476a-917f-4428-8517-faa500b65ede")
 	)
 	(wire
 		(pts
@@ -6487,6 +6786,26 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 64.77) (xy 71.12 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df09db19-1bbc-487f-a12e-d2c7d77a39b0")
+	)
+	(wire
+		(pts
+			(xy 77.47 64.77) (xy 77.47 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df77cd3f-5178-4fd0-b2d5-9986dbca3822")
+	)
+	(wire
+		(pts
 			(xy 116.84 88.9) (xy 110.49 88.9)
 		)
 		(stroke
@@ -6497,13 +6816,23 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 48.26) (xy 182.88 48.26)
+			(xy 156.21 48.26) (xy 171.45 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e0fc275e-110a-43da-a7bf-366a6910a084")
+	)
+	(wire
+		(pts
+			(xy 71.12 71.12) (xy 74.93 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e704f13b-9c1f-49a6-bda0-ad2b4aa1f194")
 	)
 	(wire
 		(pts
@@ -6514,6 +6843,16 @@
 			(type default)
 		)
 		(uuid "ea2affc5-eb93-48bb-8653-b6ff710bfce1")
+	)
+	(wire
+		(pts
+			(xy 59.69 67.31) (xy 59.69 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb954e29-4b1b-4e44-bd4e-88d8fd096fdf")
 	)
 	(wire
 		(pts
@@ -6554,16 +6893,6 @@
 			(type default)
 		)
 		(uuid "f7a630a5-1d03-4c7a-bdd0-689eb2e7c81f")
-	)
-	(wire
-		(pts
-			(xy 53.34 68.58) (xy 60.96 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f84e87f7-eb9c-4cb3-b1f3-20fb2a1f3059")
 	)
 	(wire
 		(pts
@@ -6656,7 +6985,7 @@
 		(uuid "455e3f55-bc63-4720-abc7-89f95996a2b6")
 	)
 	(label "DIG_0"
-		(at 172.72 71.12 0)
+		(at 161.29 71.12 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6746,7 +7075,7 @@
 		(uuid "a77628f3-124a-4dcb-94f0-f4abd7352f9d")
 	)
 	(label "DIG_1"
-		(at 187.96 66.04 0)
+		(at 176.53 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6926,7 +7255,7 @@
 		(uuid "f5f88adf-80ed-4565-8100-98b06fe58371")
 	)
 	(label "DIG_2"
-		(at 200.66 63.5 0)
+		(at 189.23 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7095,90 +7424,6 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Linear:L7805")
-		(at 53.34 60.96 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0c76e787-911a-4cca-8867-0db5a33e6820")
-		(property "Reference" "U3"
-			(at 53.34 54.61 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "L7805"
-			(at 53.34 57.15 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown"
-			(at 53.975 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf"
-			(at 53.34 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"
-			(at 53.34 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7bc65f1d-aa3d-447e-9ec5-26b08aa7c9f3")
-		)
-		(pin "3"
-			(uuid "6f56bd24-a684-4d4b-8d58-9a44102ff465")
-		)
-		(pin "2"
-			(uuid "57e7522d-3c5d-4add-85dc-77ae13a88b53")
-		)
-		(instances
-			(project "DymBOX_AVR"
-				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
-					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -7369,8 +7614,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 172.72 64.77 180)
+		(lib_id "Device:C_Polarized_Small")
+		(at 78.74 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7378,29 +7623,32 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1d21512c-735b-412b-9634-3fcdc4818573")
-		(property "Reference" "R10"
-			(at 169.672 62.992 0)
+		(fields_autoplaced yes)
+		(uuid "15da5738-58f8-40fd-93a3-01b31aa03986")
+		(property "Reference" "C1"
+			(at 81.28 41.3638 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "1k"
-			(at 172.72 64.77 90)
+		(property "Value" "3m3F"
+			(at 81.28 43.9038 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
-			(at 174.498 64.77 90)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm"
+			(at 78.74 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7411,7 +7659,86 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 172.72 64.77 0)
+			(at 78.74 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Polarized capacitor, small symbol"
+			(at 78.74 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a4a870af-d2ec-406e-b9e2-8439d6299186")
+		)
+		(pin "1"
+			(uuid "b670ae06-d99f-4e52-9d82-3134ac3f610f")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 161.29 64.77 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1d21512c-735b-412b-9634-3fcdc4818573")
+		(property "Reference" "R10"
+			(at 158.242 62.992 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 161.29 64.77 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+			(at 163.068 64.77 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 161.29 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7422,7 +7749,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 172.72 64.77 0)
+			(at 161.29 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8132,84 +8459,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 53.34 68.58 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "340670fa-8019-4b08-b7e5-5439b4fb10b8")
-		(property "Reference" "#PWR09"
-			(at 53.34 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 53.34 73.66 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 53.34 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "633566a5-35eb-4c94-aa30-afc714015734")
-		)
-		(instances
-			(project "DymBOX_AVR"
-				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
-					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 107.95 53.34 90)
 		(unit 1)
@@ -8477,7 +8726,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 43.18 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -9010,6 +9259,168 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:L_Small")
+		(at 64.77 64.77 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4dcfbb50-111f-4e52-95ed-41791c105e91")
+		(property "Reference" "L1"
+			(at 64.77 59.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4u7H"
+			(at 64.77 62.23 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder"
+			(at 64.77 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 64.77 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor, small symbol"
+			(at 64.77 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "16d839fd-69a5-4457-8838-527cf7fde3d8")
+		)
+		(pin "1"
+			(uuid "fcc08e42-50e4-40ed-9659-a92e60784c5c")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 71.12 68.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "57eb636c-d7ae-4664-b97f-e7899e17d189")
+		(property "Reference" "C9"
+			(at 73.66 67.3162 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22uF"
+			(at 73.66 69.8562 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 71.12 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 71.12 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "85309832-32c8-4500-bb10-75d37c8ef49d")
+		)
+		(pin "2"
+			(uuid "ed644210-1fb0-413b-8904-312d81793ee4")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 107.95 48.26 90)
 		(unit 1)
@@ -9175,88 +9586,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 44.45 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5f803d86-03c6-45d8-b334-a8933465134c")
-		(property "Reference" "C3"
-			(at 46.99 63.5062 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "C_Small"
-			(at 46.99 66.0462 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
-			(at 44.45 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 44.45 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 44.45 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "09271ae2-74fc-4714-a534-3919a0985498")
-		)
-		(pin "2"
-			(uuid "94d7104d-571a-4256-9721-68df283b6b44")
-		)
-		(instances
-			(project "DymBOX_AVR"
-				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:Crystal")
 		(at 45.72 100.33 90)
 		(unit 1)
@@ -9289,7 +9618,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Crystal:Crystal_HC49-U_Vertical"
+		(property "Footprint" "Crystal:Crystal_SMD_HC49-SD_HandSoldering"
 			(at 45.72 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -9338,6 +9667,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 29.21 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "613aa952-1488-431b-9688-dfce04779d78")
+		(property "Reference" "#PWR036"
+			(at 29.21 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 28.956 75.184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 29.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 29.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e3f6d699-34b9-44fe-a805-9ff51c524930")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 62.23 125.73 0)
 		(unit 1)
@@ -9371,7 +9777,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 62.23 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -9414,166 +9820,6 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 60.96 60.96 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "68c60c19-08f7-47eb-a03a-4552bbb55eca")
-		(property "Reference" "#PWR04"
-			(at 60.96 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 60.96 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 60.96 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 60.96 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c4e191a7-fa24-40e7-829d-0642e0b90f51")
-		)
-		(instances
-			(project "DymBOX_AVR"
-				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 39.37 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6d554c54-7f8c-4ad6-af5b-da307fbe466f")
-		(property "Reference" "C2"
-			(at 43.18 62.6109 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "C_Polarized"
-			(at 43.18 65.1509 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm"
-			(at 40.3352 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 39.37 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 39.37 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ac5d015d-a1b9-4e4d-88af-e2255d3ab440")
-		)
-		(pin "2"
-			(uuid "d5d6696d-872e-4555-b951-5a1bffd61c26")
-		)
-		(instances
-			(project "DymBOX_AVR"
-				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
-					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -9658,7 +9904,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:BC327")
-		(at 172.72 53.34 90)
+		(at 161.29 53.34 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9668,7 +9914,7 @@
 		(dnp no)
 		(uuid "6f9f39d6-653d-489b-b6f7-338b7a92bf21")
 		(property "Reference" "Q1"
-			(at 169.418 52.324 90)
+			(at 157.988 52.324 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9679,7 +9925,7 @@
 			)
 		)
 		(property "Value" "BC327"
-			(at 169.672 54.61 90)
+			(at 158.242 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9690,7 +9936,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
-			(at 174.625 48.26 0)
+			(at 163.195 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9703,7 +9949,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
-			(at 172.72 53.34 0)
+			(at 161.29 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9715,7 +9961,7 @@
 			)
 		)
 		(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
-			(at 172.72 53.34 0)
+			(at 161.29 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9726,7 +9972,7 @@
 			)
 		)
 		(property "Sim.Device" "PNP"
-			(at 172.72 53.34 0)
+			(at 161.29 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9737,7 +9983,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 172.72 53.34 0)
+			(at 161.29 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10109,7 +10355,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Transformer_THT:Transformer_Breve_TEZ-38x45"
+		(property "Footprint" "2pkstartup:Transformer_Breve_TEZ-38x45"
 			(at 49.53 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -10322,8 +10568,100 @@
 		)
 	)
 	(symbol
+		(lib_id "Regulator_Switching:AP63205WU")
+		(at 46.99 67.31 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8265a4f7-a241-4b1d-ba7b-73cd40e15631")
+		(property "Reference" "U4"
+			(at 46.99 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AP63205WU"
+			(at 46.99 59.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+			(at 46.99 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf"
+			(at 46.99 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "2A, 1.1MHz Buck DC/DC Converter, fixed 5.0V output voltage, TSOT-23-6"
+			(at 46.99 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "b9b5f7c4-d442-4837-abed-4efdbe30e199")
+		)
+		(pin "6"
+			(uuid "04af7282-7913-4ba3-9ad5-96cbcc9cdc5b")
+		)
+		(pin "3"
+			(uuid "b902f6b3-5904-43a8-b628-e227384c666e")
+		)
+		(pin "4"
+			(uuid "92be6f53-355a-441a-9927-5b7c7d16b079")
+		)
+		(pin "2"
+			(uuid "0e07ed0e-0627-4904-b717-789eaba6dbaa")
+		)
+		(pin "1"
+			(uuid "697b3046-ccfd-470f-8bbe-b00e38012a6c")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
-		(at 205.74 45.72 270)
+		(at 194.31 45.72 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10333,7 +10671,7 @@
 		(dnp no)
 		(uuid "85898992-de09-47f7-927d-f8e852d185f4")
 		(property "Reference" "#PWR025"
-			(at 201.93 45.72 0)
+			(at 190.5 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10344,7 +10682,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 206.756 43.688 90)
+			(at 195.326 43.688 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10354,7 +10692,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 205.74 45.72 0)
+			(at 194.31 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10365,7 +10703,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 205.74 45.72 0)
+			(at 194.31 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10376,7 +10714,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 205.74 45.72 0)
+			(at 194.31 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10393,88 +10731,6 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "#PWR025")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 60.96 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8ba0a289-6250-4f2f-8f1e-c94a7d14f936")
-		(property "Reference" "C1"
-			(at 64.77 62.6109 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "C_Polarized"
-			(at 64.77 65.1509 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm"
-			(at 61.9252 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 60.96 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1679e9c4-3a30-46e8-a2fa-e9c599fca07e")
-		)
-		(pin "2"
-			(uuid "d87a2e48-d8ea-4311-bb9e-a61ced27f6f1")
-		)
-		(instances
-			(project "DymBOX_AVR"
-				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
-					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -10561,7 +10817,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:BC327")
-		(at 187.96 50.8 90)
+		(at 176.53 50.8 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10571,7 +10827,7 @@
 		(dnp no)
 		(uuid "92a34e25-36c0-46be-9635-8f61c5dfc79d")
 		(property "Reference" "Q2"
-			(at 184.912 51.562 90)
+			(at 173.482 51.562 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10582,7 +10838,7 @@
 			)
 		)
 		(property "Value" "BC327"
-			(at 187.452 53.594 90)
+			(at 176.022 53.594 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10593,7 +10849,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
-			(at 189.865 45.72 0)
+			(at 178.435 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10606,7 +10862,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
-			(at 187.96 50.8 0)
+			(at 176.53 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10618,7 +10874,7 @@
 			)
 		)
 		(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
-			(at 187.96 50.8 0)
+			(at 176.53 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10629,7 +10885,7 @@
 			)
 		)
 		(property "Sim.Device" "PNP"
-			(at 187.96 50.8 0)
+			(at 176.53 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10640,7 +10896,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 187.96 50.8 0)
+			(at 176.53 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10663,6 +10919,84 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 78.74 45.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "935f7efa-fffb-4b7a-b937-d155a5aead94")
+		(property "Reference" "#PWR022"
+			(at 78.74 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 78.74 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 78.74 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e3187a0a-73bb-47ef-999d-6d347e6d2ddd")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -10749,7 +11083,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 187.96 59.69 180)
+		(at 176.53 59.69 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10759,7 +11093,7 @@
 		(dnp no)
 		(uuid "95695751-3fb1-4cb0-bc97-aac39b715d89")
 		(property "Reference" "R11"
-			(at 184.658 57.912 0)
+			(at 173.228 57.912 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10769,7 +11103,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 187.96 59.69 90)
+			(at 176.53 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10779,7 +11113,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
-			(at 189.738 59.69 90)
+			(at 178.308 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10790,7 +11124,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 187.96 59.69 0)
+			(at 176.53 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10801,7 +11135,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 187.96 59.69 0)
+			(at 176.53 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10906,7 +11240,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:BC327")
-		(at 200.66 48.26 90)
+		(at 189.23 48.26 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10916,7 +11250,7 @@
 		(dnp no)
 		(uuid "97b88656-ca6d-4920-8daf-b07cd41f3e63")
 		(property "Reference" "Q5"
-			(at 198.12 50.292 90)
+			(at 186.69 50.292 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10927,7 +11261,7 @@
 			)
 		)
 		(property "Value" "BC327"
-			(at 199.898 52.578 90)
+			(at 188.468 52.578 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10938,7 +11272,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
-			(at 202.565 43.18 0)
+			(at 191.135 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10951,7 +11285,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF"
-			(at 200.66 48.26 0)
+			(at 189.23 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10963,7 +11297,7 @@
 			)
 		)
 		(property "Description" "0.8A Ic, 45V Vce, PNP Transistor, TO-92"
-			(at 200.66 48.26 0)
+			(at 189.23 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10974,7 +11308,7 @@
 			)
 		)
 		(property "Sim.Device" "PNP"
-			(at 200.66 48.26 0)
+			(at 189.23 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10985,7 +11319,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 200.66 48.26 0)
+			(at 189.23 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11176,6 +11510,88 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "K1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 74.93 68.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9ea226f2-b9ae-47d6-8e05-0bbe5198f3d1")
+		(property "Reference" "C10"
+			(at 77.47 67.3162 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22uF"
+			(at 77.47 69.8562 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 74.93 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 74.93 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 74.93 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "84ca74dc-75a4-4cca-bbc1-ebe6748f6877")
+		)
+		(pin "2"
+			(uuid "9da38478-e9d3-4e7f-8907-17737bcdcc7d")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -11458,7 +11874,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 43.18 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -11742,6 +12158,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 29.21 68.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af34a5b2-586b-442a-b7ff-053c7886df01")
+		(property "Reference" "C2"
+			(at 31.75 67.3162 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 31.75 69.8562 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 29.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 29.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d4a0148b-2e99-40cf-ba1a-fe07e726c60e")
+		)
+		(pin "2"
+			(uuid "b6817036-5bcc-4920-9d46-a562de8c4b59")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "2pkstartup:FST")
 		(at 39.37 45.72 0)
 		(unit 1)
@@ -11820,7 +12318,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 177.8 50.8 270)
+		(at 166.37 50.8 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11830,7 +12328,7 @@
 		(dnp no)
 		(uuid "bd3221a3-5577-4176-992b-232d68391a76")
 		(property "Reference" "#PWR023"
-			(at 173.99 50.8 0)
+			(at 162.56 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11841,7 +12339,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 178.054 53.34 90)
+			(at 166.624 53.34 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11851,7 +12349,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 177.8 50.8 0)
+			(at 166.37 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11862,7 +12360,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 50.8 0)
+			(at 166.37 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11873,7 +12371,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 177.8 50.8 0)
+			(at 166.37 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11890,6 +12388,83 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 74.93 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bf4c6e0f-892b-4abc-b09b-da69801c5c6f")
+		(property "Reference" "#PWR038"
+			(at 74.93 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 74.676 75.184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 74.93 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 74.93 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 74.93 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "141a6b22-1958-4724-a19b-ba7de83bb8af")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -12051,8 +12626,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 193.04 48.26 270)
+		(lib_id "Device:C_Small")
+		(at 62.23 67.31 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12060,20 +12635,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c981b0a5-868e-41e4-9b67-20a2781931cb")
-		(property "Reference" "#PWR024"
-			(at 189.23 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 192.024 46.736 90)
+		(fields_autoplaced yes)
+		(uuid "c8f8799b-b196-4e18-b0d4-c1f82fbac9eb")
+		(property "Reference" "C8"
+			(at 64.77 66.0462 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12083,8 +12648,19 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 193.04 48.26 0)
+		(property "Value" "100nF"
+			(at 64.77 68.5862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 62.23 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12095,7 +12671,88 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 48.26 0)
+			(at 62.23 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 62.23 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "360c5113-93e8-48d3-9c26-9ae826df22a1")
+		)
+		(pin "2"
+			(uuid "91d0e08b-365a-4d67-8461-0ed969e8cfd8")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 181.61 48.26 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c981b0a5-868e-41e4-9b67-20a2781931cb")
+		(property "Reference" "#PWR024"
+			(at 177.8 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 180.594 46.736 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12106,7 +12763,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 193.04 48.26 0)
+			(at 181.61 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12201,6 +12858,83 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 29.21 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cf3b9bd9-77a0-43ae-925f-25dfa0c30ca9")
+		(property "Reference" "#PWR014"
+			(at 29.21 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 25.908 63.754 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 29.21 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 29.21 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2769b50a-4398-4cff-9cca-618e02a0e9a7")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -12357,84 +13091,6 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "R15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 39.37 60.96 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d9065e25-30f7-4d0f-88f3-65086750eb41")
-		(property "Reference" "#PWR016"
-			(at 39.37 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+12V"
-			(at 39.37 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 39.37 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 39.37 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 39.37 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d1549f81-4a1c-43d5-a79a-ddca4ff97f6b")
-		)
-		(instances
-			(project "DymBOX_AVR"
-				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
-					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -12605,8 +13261,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 200.66 57.15 180)
+		(lib_id "power:+5V")
+		(at 77.47 63.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12614,9 +13270,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e587a9a0-0711-455b-af1d-2a02852a2f09")
-		(property "Reference" "R12"
-			(at 197.612 55.372 0)
+		(uuid "e3bc30cf-10f7-4fee-b3f9-bfcedffb94b8")
+		(property "Reference" "#PWR039"
+			(at 77.47 67.31 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12625,8 +13282,8 @@
 				)
 			)
 		)
-		(property "Value" "1k"
-			(at 200.66 57.404 90)
+		(property "Value" "+5V"
+			(at 75.438 62.484 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12635,8 +13292,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
-			(at 202.438 57.15 90)
+		(property "Footprint" ""
+			(at 77.47 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12647,7 +13304,83 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 200.66 57.15 0)
+			(at 77.47 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 77.47 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2e24064e-76fa-4a18-94ea-c928a81a6fa6")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 189.23 57.15 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e587a9a0-0711-455b-af1d-2a02852a2f09")
+		(property "Reference" "R12"
+			(at 186.182 55.372 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 189.23 57.404 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+			(at 191.008 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 189.23 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12658,7 +13391,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 200.66 57.15 0)
+			(at 189.23 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12774,9 +13507,6 @@
 		)
 		(pin "10"
 			(uuid "78b50f04-4635-4168-a781-2a4d8806e8f9")
-		)
-		(pin "6"
-			(uuid "67a0d308-d127-4921-8600-808afd1bcfeb")
 		)
 		(pin "11"
 			(uuid "9c72feee-defa-4072-a419-eda8b11ff998")
@@ -13500,6 +14230,83 @@
 			(project "DymBOX_AVR"
 				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
 					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 46.99 74.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fddf3f9d-b097-49a9-96b8-e2c7d729fd3f")
+		(property "Reference" "#PWR037"
+			(at 46.99 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 46.736 78.994 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 46.99 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 46.99 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f87d7dcc-685b-4b87-a944-a444441862f0")
+		)
+		(instances
+			(project "DymBOX_AVR"
+				(path "/586f9677-488d-4753-8c82-bcf4ec642766"
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
