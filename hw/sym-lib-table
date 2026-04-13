@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "2pkstartup") (type "KiCad") (uri "/home/jana/_dev/_kicad_lbr/2pkstartup.kicad_sym") (options "") (descr ""))
+)
