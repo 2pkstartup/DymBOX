@@ -40,8 +40,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 1.0,
-          "height": 1.5,
-          "width": 1.5
+          "height": 1.7,
+          "width": 1.7
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -488,9 +488,7 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [
-      "2pkstartup"
-    ],
+    "pinned_footprint_libs": [],
     "pinned_symbol_libs": []
   },
   "meta": {
@@ -654,7 +652,7 @@
         "uuid": "586f9677-488d-4753-8c82-bcf4ec642766"
       }
     ],
-    "used_designators": "J2-3,J6",
+    "used_designators": "J3,J8,F2",
     "variants": []
   },
   "sheets": [
