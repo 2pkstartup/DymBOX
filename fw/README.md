@@ -7,7 +7,7 @@ Regulátor teploty postavený na mikrokontroléru **ATmega8** s 3-místným 7-se
 - **Měření teploty** – DS18B20 (1-Wire), rozlišení 0.1 °C
 - **3-místný 7-segment display** – multiplexovaný v Timer0 ISR (~163 Hz/číslice)
 - **Rotační enkodér KY-040** – nastavení žádané teploty a otáček ventilátoru
-- **PWM ventilátor** – 11 kroků (0–100 % po 10 %), Timer1 Fast PWM 8-bit na ~977 Hz
+- **PWM ventilátor** – 21 kroků (0–100 % po 5 %), Timer1 Fast PWM 8-bit na ~488 Hz
 - **Topná spirála** – ON/OFF regulace s hysterezí 5 °C, signalizace DP3
 - **Nastavitelný setpoint** – výchozí 32.0 °C, editace po 0.1 °C
 
@@ -18,7 +18,7 @@ Regulátor teploty postavený na mikrokontroléru **ATmega8** s 3-místným 7-se
 | Segment | Pin ATmega8 | Port |
 |---------|-------------|------|
 | A       | PB0         | PORTB |
-| B       | PD6         | PORTD |
+| B       | PD5         | PORTD |
 | C       | PC3         | PORTC |
 | D       | PC1         | PORTC |
 | E       | PC0         | PORTC |
@@ -30,7 +30,7 @@ Regulátor teploty postavený na mikrokontroléru **ATmega8** s 3-místným 7-se
 
 | Číslice | Pin | Pozice |
 |---------|-----|--------|
-| DIG1    | PD5 | Stovky |
+| DIG1    | PD6 | Stovky |
 | DIG2    | PD2 | Desítky |
 | DIG3    | PD1 | Jednotky |
 
@@ -56,8 +56,8 @@ Regulátor teploty postavený na mikrokontroléru **ATmega8** s 3-místným 7-se
 
 | Funkce | Pin | Typ |
 |--------|-----|-----|
-| Ventilátor (PWM) | PB1 (OC1A) | Fast PWM ~977 Hz |
-| Topná spirála     | PB2        | SW ON/OFF (active LOW) |
+| Ventilátor (PWM) | PB1 (OC1A) | Fast PWM ~488 Hz |
+| Topná spirála     | PB2        | SW ON/OFF (active HIGH) |
 
 ### Souhrn obsazení pinů
 
@@ -66,8 +66,8 @@ PORTB: PB0 = seg A       PB1 = PWM fan    PB2 = heater    PB3–PB5 = volné
 PORTC: PC0 = seg E       PC1 = seg D      PC2 = seg DP    PC3 = seg C
        PC4 = seg G       PC5 = DS18B20
 PORTD: PD0 = ENC SW      PD1 = DIG3       PD2 = DIG2
-       PD3 = ENC CLK     PD4 = ENC DT     PD5 = DIG1
-       PD6 = seg B       PD7 = seg F
+       PD3 = ENC CLK     PD4 = ENC DT     PD5 = seg B
+       PD6 = DIG1        PD7 = seg F
 ```
 
 ## Ovládání
@@ -86,7 +86,7 @@ Zobrazuje aktuální teplotu ve formátu **XX.X** (tečka za druhým digitem).
 
 Zobrazuje rychlost ventilátoru ve formátu **FXX** (např. F50 = 50 %). Při 100 % zobrazí **100**.
 
-- **Otočení enkodéru** → mění rychlost po 10 % (0–100 %)
+- **Otočení enkodéru** → mění rychlost po 5 % (0–100 %)
 - **Stisk tlačítka** → přepne do editace setpointu
 - Po **2 sekundách** bez pohybu se automaticky vrátí na zobrazení teploty
 
@@ -131,11 +131,20 @@ cmake --build build --target flash                           # Nahrání do MCU
 cmake --build build --target fuses                           # Nastavení fuses
 ```
 
+### Hodnoty fuses (externí krystal 8 MHz)
+
+| Fuse | Hodnota | Popis |
+|------|---------|-------|
+| lfuse | `0xFF` | CKSEL=1111 (externí krystal), SUT=11 (65 ms startup) |
+| hfuse | `0xD9` | CKOPT=1 (low-power mode), SPIEN povolen |
+
+> **Pozor:** Po nastavení `lfuse=0xFF` ATmega očekává externí krystal. Bez něj chip nenastartuje.
+
 ### Velikost firmware
 
 ```
-Program:  ~2186 bytes (26.7% Full)
-Data:       ~61 bytes  (6.0% Full)
+Program:  ~2172 bytes (26.5% Full)
+Data:       ~71 bytes  (6.9% Full)
 ```
 
 ## Konfigurace
@@ -144,11 +153,11 @@ Hlavní konstanty v `main.c`:
 
 | Konstanta | Hodnota | Popis |
 |-----------|---------|-------|
-| `F_CPU` | 16 MHz | Frekvence krystalu/oscilátoru (CMakeLists.txt) |
+| `F_CPU` | 8 MHz | Frekvence externího krystalu (CMakeLists.txt) |
 | `HEATER_HYST` | 50 (5.0 °C) | Hystereze topné spirály (v 1/10 °C) |
 | `HEATER_PERIOD` | 4880 | Perioda ON/OFF cyklu (~10 s) |
 | Výchozí setpoint | 320 (32.0 °C) | Žádaná teplota (v 1/10 °C) |
-| Výchozí fan | 5 (50 %) | Výchozí rychlost ventilátoru |
+| Výchozí fan | 10 (50 %) | Výchozí rychlost ventilátoru (krok 0–20) |
 
 ## Schéma zapojení
 
@@ -170,7 +179,7 @@ Hlavní konstanty v `main.c`:
     DIG2 ← PD2 ┤13       16├ PB2
  ENC CLK → PD3 ┤14       15├ PB1
   ENC DT → PD4 ┤15       14├ PD7 → seg F
-    DIG1 ← PD5 ┤16       13├ PD6 → seg B
+   seg B ← PD5 ┤16       13├ PD6 → DIG1
                  └───────────┘
 ```
 
