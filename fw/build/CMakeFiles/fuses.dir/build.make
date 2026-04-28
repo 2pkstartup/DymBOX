@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/herzog/_dev/avr/dymbox
+CMAKE_SOURCE_DIR = /home/herzog/_dev/avr/DymBOX/fw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/herzog/_dev/avr/dymbox/build
+CMAKE_BINARY_DIR = /home/herzog/_dev/avr/DymBOX/fw/build
 
 # Utility rule file for fuses.
 
@@ -67,8 +67,8 @@ include CMakeFiles/fuses.dir/compiler_depend.make
 include CMakeFiles/fuses.dir/progress.make
 
 CMakeFiles/fuses:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/herzog/_dev/avr/dymbox/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Programming fuses: lfuse=0xE4, hfuse=0xD9"
-	/usr/bin/avrdude -c usbasp -p atmega8 -U lfuse:w:0xE4:m -U hfuse:w:0xD9:m
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Programming fuses: lfuse=0xFF, hfuse=0xD9"
+	/usr/bin/avrdude -c usbasp -p atmega8 -U lfuse:w:0xFF:m -U hfuse:w:0xD9:m
 
 fuses: CMakeFiles/fuses
 fuses: CMakeFiles/fuses.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/fuses.dir/clean:
 .PHONY : CMakeFiles/fuses.dir/clean
 
 CMakeFiles/fuses.dir/depend:
-	cd /home/herzog/_dev/avr/dymbox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/herzog/_dev/avr/dymbox /home/herzog/_dev/avr/dymbox /home/herzog/_dev/avr/dymbox/build /home/herzog/_dev/avr/dymbox/build /home/herzog/_dev/avr/dymbox/build/CMakeFiles/fuses.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/herzog/_dev/avr/DymBOX/fw/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/herzog/_dev/avr/DymBOX/fw /home/herzog/_dev/avr/DymBOX/fw /home/herzog/_dev/avr/DymBOX/fw/build /home/herzog/_dev/avr/DymBOX/fw/build /home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles/fuses.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/fuses.dir/depend
 

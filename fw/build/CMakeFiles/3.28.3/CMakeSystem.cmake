@@ -1,9 +1,9 @@
-set(CMAKE_HOST_SYSTEM "Linux-6.17.0-19-generic")
+set(CMAKE_HOST_SYSTEM "Linux-6.17.0-20-generic")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "6.17.0-19-generic")
+set(CMAKE_HOST_SYSTEM_VERSION "6.17.0-20-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
-include("/home/herzog/_dev/avr/dymbox/cmake/avr-gcc.cmake")
+include("/home/herzog/_dev/avr/DymBOX/fw/cmake/avr-gcc.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")

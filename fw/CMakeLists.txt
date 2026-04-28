@@ -3,7 +3,7 @@ project(dymbox C)
 
 # MCU and clock
 set(MCU "atmega8" CACHE STRING "AVR MCU type")
-set(F_CPU "16000000UL" CACHE STRING "CPU frequency in Hz")
+set(F_CPU "8000000UL" CACHE STRING "CPU frequency in Hz")
 
 # Programmer settings
 set(PROGRAMMER "usbasp" CACHE STRING "avrdude programmer type")
@@ -48,10 +48,12 @@ if(AVRDUDE)
         COMMENT "Flashing ${PROJECT_NAME}.hex"
     )
 
-    # Fuse programming (ATmega8: internal 16 MHz, no CKDIV8)
+    # Fuse programming (ATmega8: external crystal 8 MHz, low-power mode)
+    # lfuse=0xFF: CKSEL=1111 (xtal 8-16 MHz range), SUT=11 (65ms startup), BOD disabled
+    # hfuse=0xD9: CKOPT=1 (low-power crystal, ok up to ~8 MHz), SPIEN=0, BOOTRST=1
     add_custom_target(fuses
         COMMAND ${AVRDUDE} -c ${PROGRAMMER} -p ${MCU} ${_port_arg}
-                -U lfuse:w:0xE4:m -U hfuse:w:0xD9:m
-        COMMENT "Programming fuses: lfuse=0xE4, hfuse=0xD9"
+                -U lfuse:w:0xFF:m -U hfuse:w:0xD9:m
+        COMMENT "Programming fuses: lfuse=0xFF, hfuse=0xD9"
     )
 endif()

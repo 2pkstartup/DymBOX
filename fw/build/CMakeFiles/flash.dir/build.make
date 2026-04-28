@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/herzog/_dev/avr/dymbox
+CMAKE_SOURCE_DIR = /home/herzog/_dev/avr/DymBOX/fw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/herzog/_dev/avr/dymbox/build
+CMAKE_BINARY_DIR = /home/herzog/_dev/avr/DymBOX/fw/build
 
 # Utility rule file for flash.
 
@@ -67,7 +67,7 @@ include CMakeFiles/flash.dir/compiler_depend.make
 include CMakeFiles/flash.dir/progress.make
 
 CMakeFiles/flash: dymbox.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/herzog/_dev/avr/dymbox/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Flashing dymbox.hex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Flashing dymbox.hex"
 	/usr/bin/avrdude -c usbasp -p atmega8 -U flash:w:dymbox.hex:i
 
 flash: CMakeFiles/flash
@@ -83,6 +83,6 @@ CMakeFiles/flash.dir/clean:
 .PHONY : CMakeFiles/flash.dir/clean
 
 CMakeFiles/flash.dir/depend:
-	cd /home/herzog/_dev/avr/dymbox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/herzog/_dev/avr/dymbox /home/herzog/_dev/avr/dymbox /home/herzog/_dev/avr/dymbox/build /home/herzog/_dev/avr/dymbox/build /home/herzog/_dev/avr/dymbox/build/CMakeFiles/flash.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/herzog/_dev/avr/DymBOX/fw/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/herzog/_dev/avr/DymBOX/fw /home/herzog/_dev/avr/DymBOX/fw /home/herzog/_dev/avr/DymBOX/fw/build /home/herzog/_dev/avr/DymBOX/fw/build /home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles/flash.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/flash.dir/depend
 

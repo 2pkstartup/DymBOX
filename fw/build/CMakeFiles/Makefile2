@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/herzog/_dev/avr/dymbox
+CMAKE_SOURCE_DIR = /home/herzog/_dev/avr/DymBOX/fw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/herzog/_dev/avr/dymbox/build
+CMAKE_BINARY_DIR = /home/herzog/_dev/avr/DymBOX/fw/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -83,14 +83,14 @@ clean: CMakeFiles/fuses.dir/clean
 CMakeFiles/dymbox.elf.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dymbox.elf.dir/build.make CMakeFiles/dymbox.elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dymbox.elf.dir/build.make CMakeFiles/dymbox.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/herzog/_dev/avr/dymbox/build/CMakeFiles --progress-num=1,2 "Built target dymbox.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles --progress-num=1,2 "Built target dymbox.elf"
 .PHONY : CMakeFiles/dymbox.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/dymbox.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/dymbox/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/dymbox.elf.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/dymbox/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles 0
 .PHONY : CMakeFiles/dymbox.elf.dir/rule
 
 # Convenience name for target.
@@ -109,14 +109,14 @@ CMakeFiles/dymbox.elf.dir/clean:
 CMakeFiles/flash.dir/all: CMakeFiles/dymbox.elf.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flash.dir/build.make CMakeFiles/flash.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/flash.dir/build.make CMakeFiles/flash.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/herzog/_dev/avr/dymbox/build/CMakeFiles --progress-num=3 "Built target flash"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles --progress-num=3 "Built target flash"
 .PHONY : CMakeFiles/flash.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/flash.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/dymbox/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/flash.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/dymbox/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles 0
 .PHONY : CMakeFiles/flash.dir/rule
 
 # Convenience name for target.
@@ -135,14 +135,14 @@ CMakeFiles/flash.dir/clean:
 CMakeFiles/fuses.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuses.dir/build.make CMakeFiles/fuses.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuses.dir/build.make CMakeFiles/fuses.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/herzog/_dev/avr/dymbox/build/CMakeFiles --progress-num=4 "Built target fuses"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles --progress-num=4 "Built target fuses"
 .PHONY : CMakeFiles/fuses.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fuses.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/dymbox/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fuses.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/dymbox/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles 0
 .PHONY : CMakeFiles/fuses.dir/rule
 
 # Convenience name for target.

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/herzog/_dev/avr/dymbox
+CMAKE_SOURCE_DIR = /home/herzog/_dev/avr/DymBOX/fw
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/herzog/_dev/avr/dymbox/build
+CMAKE_BINARY_DIR = /home/herzog/_dev/avr/DymBOX/fw/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/dymbox/build/CMakeFiles /home/herzog/_dev/avr/dymbox/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles /home/herzog/_dev/avr/DymBOX/fw/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/dymbox/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/herzog/_dev/avr/DymBOX/fw/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

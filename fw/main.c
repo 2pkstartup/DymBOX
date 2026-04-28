@@ -12,7 +12,7 @@
  *   - Měření teploty DS18B20 (1-Wire), rozlišení 0.1 °C
  *   - 3-místný 7-seg display (common anode), multiplexovaný Timer0 ISR
  *   - Rotační enkodér KY-040 (polling v Timer0 ISR, debounce tlačítka)
- *   - PWM ventilátor 0-100% po 10% (Timer1, ~977 Hz, active HIGH)
+ *   - PWM ventilátor 0-100% po 10% (Timer1, ~488 Hz, active HIGH)
  *   - Topná spirála ON/OFF s hysterezí 5 °C (active HIGH)
  *   - Setpoint ukládán do EEPROM (s magic byte validací)
  *
@@ -34,8 +34,8 @@
  *
  *   PORTD:  PD0 = ENC SW (tlačítko) PD3 = ENC CLK (A)
  *           PD1 = DIG3 (jednotky)   PD4 = ENC DT  (B)
- *           PD2 = DIG2 (desítky)    PD5 = DIG1 (stovky)
- *           PD6 = seg B             PD7 = seg F
+ *           PD2 = DIG2 (desítky)    PD5 = seg B
+ *           PD6 = DIG1 (stovky)     PD7 = seg F
  *
  * Schéma:
  *
@@ -56,17 +56,17 @@
  *      ENC SW → PD0 ─┤13 (RXD)        16├─ PB2 → heater
  *        DIG3 ← PD1 ─┤14 (TXD)        15├─ PB1 → PWM fan
  *        DIG2 ← PD2 ─┤15 (INT0)       14├─ PD7 → seg F
- *     ENC CLK → PD3 ─┤16 (INT1)       13├─ PD6 → seg B
+ *     ENC CLK → PD3 ─┤16 (INT1)       13├─ PD6 → DIG1
  *      ENC DT → PD4 ─┤17 (T0)
- *        DIG1 ← PD5 ─┤18 (T1)
+ *       seg B ← PD5 ─┤18 (T1)
  *                      └────────────────────┘
  *
  *   Display: common anode, segmenty active LOW
  *   Digit select: active LOW (PNP/P-FET)
  *   Výstupy PB1, PB2: active HIGH (pro D4184 MOSFET moduly)
  *   DS18B20: externě 4.7 kΩ pull-up na VCC
- *   KY-040: interní pull-up na PD3, PD4, PD5
- *   F_CPU = 16 MHz
+ *   KY-040: interní pull-up na PD0, PD3, PD4
+ *   F_CPU = 8 MHz
  *
  * Konstanty:
  *   HEATER_HYST    = 5.0 °C (hystereze topné spirály)
@@ -85,10 +85,10 @@
 /* Masky segmentových pinů na jednotlivých portech */
 #define SEG_B_MASK  ((1 << PB0))                                          /* A */
 #define SEG_C_MASK  ((1 << PC0)|(1 << PC1)|(1 << PC2)|(1 << PC3)|(1 << PC4)) /* G,C,D,DP,E */
-#define SEG_D_MASK  ((1 << PD6)|(1 << PD7))                              /* B,F */
+#define SEG_D_MASK  ((1 << PD5)|(1 << PD7))                              /* B,F */
 
 /* Maska digit-select pinů na PORTD */
-#define DIG_MASK    ((1 << PD1)|(1 << PD2)|(1 << PD5))
+#define DIG_MASK    ((1 << PD1)|(1 << PD2)|(1 << PD6))
 
 /* Rotační enkodér KY-040 na PORTD */
 #define ENC_CLK     PD3
@@ -110,8 +110,8 @@
 #define HEATER_PERIOD  4880   /* 10 s perioda (488 Hz × 10) */
 #define HEATER_HYST    25     /* hystereze 5.0°C (v 1/10 °C) */
 
-/* Pin pro každou pozici: DIG1(stovky)=PD5, DIG2(desítky)=PD2, DIG3(jednotky)=PD1 */
-static const uint8_t dig_pin[] = {PD5, PD2, PD1};
+/* Pin pro každou pozici: DIG1(stovky)=PD6, DIG2(desítky)=PD2, DIG3(jednotky)=PD1 */
+static const uint8_t dig_pin[] = {PD6, PD2, PD1};
 
 /*
  * Lookup tabulky: bity = piny, které mají být LOW (aktivní) pro danou číslici.
@@ -148,18 +148,18 @@ static const uint8_t seg_c[] = {
     0x1A, /* 9: C,D,G         = (1<<3)|(1<<1)|(1<<4) */
 };
 
-/*         B=PD6  F=PD7 */
+/*         B=PD5  F=PD7 */
 static const uint8_t seg_d[] = {
-    0xC0, /* 0: B,F  = (1<<6)|(1<<7) */
-    0x40, /* 1: B    = (1<<6) */
-    0x40, /* 2: B    = (1<<6) */
-    0x40, /* 3: B    = (1<<6) */
-    0xC0, /* 4: B,F  = (1<<6)|(1<<7) */
+    0xA0, /* 0: B,F  = (1<<5)|(1<<7) */
+    0x20, /* 1: B    = (1<<5) */
+    0x20, /* 2: B    = (1<<5) */
+    0x20, /* 3: B    = (1<<5) */
+    0xA0, /* 4: B,F  = (1<<5)|(1<<7) */
     0x80, /* 5: F    = (1<<7) */
     0x80, /* 6: F    = (1<<7) */
-    0x40, /* 7: B    = (1<<6) */
-    0xC0, /* 8: B,F  = (1<<6)|(1<<7) */
-    0xC0, /* 9: B,F  = (1<<6)|(1<<7) */
+    0x20, /* 7: B    = (1<<5) */
+    0xA0, /* 8: B,F  = (1<<5)|(1<<7) */
+    0xA0, /* 9: B,F  = (1<<5)|(1<<7) */
 };
 
 /* Display buffer: aktivní segmentové bity pro každý port, pro 3 číslice */
@@ -208,9 +208,9 @@ ISR(TIMER0_OVF_vect)
     /* Detekce hrany CLK: falling edge (1->0 v aktivním stavu) */
     if (clk_now && !enc_last_clk) {
         if (pind & (1 << ENC_DT))
-            enc_counter++;
-        else
             enc_counter--;
+        else
+            enc_counter++;
     }
     enc_last_clk = clk_now;
 
@@ -237,7 +237,7 @@ static void display_init(void)
     DDRC  = SEG_C_MASK;
     PORTC = 0x3F;
 
-    /* PORTD: PD1,PD2,PD5 výstup (digit), PD6-PD7 výstup (seg B,F), PD0,PD3,PD4 vstup s pull-up */
+    /* PORTD: PD1,PD2,PD6 výstup (digit), PD5,PD7 výstup (seg B,F), PD0,PD3,PD4 vstup s pull-up */
     DDRD  = DIG_MASK | SEG_D_MASK;  /* PD0,PD3,PD4 zůstávají vstup */
     PORTD = 0xFF;                   /* pull-up na všech (i enkodér) */
 
@@ -452,26 +452,27 @@ static void wait_button_release(void)
 
 /* Invertovaná tabulka: 0%=0(LOW), 10%=25, ... 100%=255(HIGH) */
 static const uint8_t pwm_table[] = {
-    0, 25, 51, 76, 102, 128, 153, 179, 204, 230, 255
+    0, 13, 26, 38, 51, 64, 77, 89, 102, 115, 128,
+    140, 153, 166, 179, 191, 204, 217, 230, 242, 255
 };
 
 static void pwm_init(void)
 {
     /* Timer1: Fast PWM 8-bit, non-inverting na OC1A (PB1) */
     /* HIGH když counter < OCR1A, LOW když counter >= OCR1A */
-    /* 16 MHz / 64 / 256 = ~977 Hz (D4184 nezvládá vysoké frekvence) */
+    /* 8 MHz / 64 / 256 = ~488 Hz (D4184 nezvládá vysoké frekvence) */
     TCCR1A = (1 << COM1A1) | (1 << WGM10);
     TCCR1B = (1 << WGM12) | (1 << CS11) | (1 << CS10);
-    OCR1A  = pwm_table[5];  /* 50% výchozí */
+    OCR1A  = pwm_table[10];  /* 50% výchozí */
 }
 
 static void pwm_set(uint8_t step)
 {
-    if (step > 10) step = 10;
+    if (step > 20) step = 20;
     OCR1A = pwm_table[step];
 }
 
-/* Zobrazit fan speed: "FXX" (0-90%) nebo "100" */
+/* Zobrazit fan speed: "FXX" (0-95%) nebo "100" */
 #define CHAR_F_B  0x01        /* A=PB0 */
 #define CHAR_F_C  0x11        /* E=PC0, G=PC4 */
 #define CHAR_F_D  0x80        /* F=PD7 */
@@ -551,7 +552,7 @@ int main(void)
     sei();
 
     int16_t setpoint = eeprom_load_setpoint(320);  /* z EEPROM nebo 32.0°C */
-    int8_t  fan_step = 5;     /* 50% */
+    int8_t  fan_step = 10;    /* 50% */
     uint8_t mode = MODE_TEMP;
     uint8_t fan_timeout = 0;  /* odpočet 2 s (40 × 50 ms) */
     int16_t last_enc;
@@ -580,9 +581,9 @@ int main(void)
             if (delta) {
                 fan_step += delta;
                 if (fan_step < 0)  fan_step = 0;
-                if (fan_step > 10) fan_step = 10;
+                if (fan_step > 20) fan_step = 20;
                 pwm_set(fan_step);
-                display_fan(fan_step * 10);
+                display_fan(fan_step * 5);
                 fan_timeout = 40;  /* 2 s */
                 mode = MODE_FAN;
                 break;
@@ -605,9 +606,9 @@ int main(void)
             if (delta) {
                 fan_step += delta;
                 if (fan_step < 0)  fan_step = 0;
-                if (fan_step > 10) fan_step = 10;
+                if (fan_step > 20) fan_step = 20;
                 pwm_set(fan_step);
-                display_fan(fan_step * 10);
+                display_fan(fan_step * 5);
                 fan_timeout = 40;  /* reset timeoutu */
             }
 
